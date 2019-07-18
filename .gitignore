@@ -1,11 +1,11 @@
 *.sqlite3
-
 *.pyc
-
 *.pyo
-
 *.json
 *.log
 *.log.*
-DataMan/Records/media/*
-DataMan/Records/media/**
+media/
+media/*
+media/**
+DataMan/media/
+DataMan/Records/media/
