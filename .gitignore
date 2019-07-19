@@ -4,11 +4,3 @@
 *.json
 *.log
 *.log.*
-logs/
-logs/*
-logs/**
-media/
-media/*
-media/**
-DataMan/media/
-DataMan/Records/media/
