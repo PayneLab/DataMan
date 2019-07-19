@@ -4,8 +4,8 @@
 *.json
 *.log
 *.log.*
-log/
-log/*
+logs/
+logs/*
 media/
 media/*
 media/**
