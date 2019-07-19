@@ -1,7 +1,730 @@
-2019-07-17 07:47:21,663  DEBUG  18120  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
-2019-07-17 07:47:21,663  WARNING  18120  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  120  Run time of job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-16 22:35:29 MDT)" was missed by 0:11:51.806754  
-2019-07-17 07:47:21,663  DEBUG  18120  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-17 07:50:29.856520-06:00 (in 188.193246 seconds)  
-2019-07-17 07:50:29,862  DEBUG  18120  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
-2019-07-17 07:50:29,862  INFO  18120  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-17 07:50:29 MDT)" (scheduled at 2019-07-17 07:50:29.856520-06:00)  
-2019-07-17 07:50:29,862  DEBUG  18120  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-17 08:05:29.856520-06:00 (in 899.994185 seconds)  
-2019-07-17 07:50:30,033  INFO  18120  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-17 08:05:29 MDT)" executed successfully  
+2019-07-19 00:13:28,039  DEBUG  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 00:13:28,052  DEBUG  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 00:28:28.025107-06:00 (in 899.973464 seconds)  
+2019-07-19 00:13:28,053  INFO  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 00:28:28 MDT)" (scheduled at 2019-07-19 00:13:28.025107-06:00)  
+2019-07-19 00:13:28,461  INFO  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 00:28:28 MDT)" executed successfully  
+2019-07-19 00:28:28,045  DEBUG  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 00:28:28,047  DEBUG  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 00:43:28.025107-06:00 (in 899.978826 seconds)  
+2019-07-19 00:28:28,047  INFO  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 00:43:28 MDT)" (scheduled at 2019-07-19 00:28:28.025107-06:00)  
+2019-07-19 00:28:28,272  INFO  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 00:43:28 MDT)" executed successfully  
+2019-07-19 10:33:26,590  DEBUG  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 10:33:26,590  DEBUG  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 10:43:28.025107-06:00 (in 601.435087 seconds)  
+2019-07-19 10:33:26,590  WARNING  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  120  Run time of job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 10:43:28 MDT)" was missed by 0:04:58.564913  
+2019-07-19 10:43:28,026  DEBUG  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 10:43:28,026  DEBUG  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 10:58:28.025107-06:00 (in 899.998502 seconds)  
+2019-07-19 10:43:28,026  INFO  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 10:58:28 MDT)" (scheduled at 2019-07-19 10:43:28.025107-06:00)  
+2019-07-19 10:43:28,229  INFO  14876  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 10:58:28 MDT)" executed successfully  
+2019-07-19 14:00:32,200  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  add_job  436  Adding job tentatively -- it will be properly scheduled when the scheduler starts  
+2019-07-19 14:00:32,200  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _real_add_job  878  Added job "make_backup" to job store "default"  
+2019-07-19 14:00:32,200  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  start  162  Scheduler started  
+2019-07-19 14:00:32,200  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 14:00:32,200  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 14:15:32.200095-06:00 (in 900.000000 seconds)  
+2019-07-19 14:00:33,887  INFO  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  add_job  436  Adding job tentatively -- it will be properly scheduled when the scheduler starts  
+2019-07-19 14:00:33,887  INFO  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _real_add_job  878  Added job "make_backup" to job store "default"  
+2019-07-19 14:00:33,887  INFO  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  start  162  Scheduler started  
+2019-07-19 14:00:33,887  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 14:00:33,887  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 14:15:33.887192-06:00 (in 900.000000 seconds)  
+2019-07-19 14:00:47,009  WARNING  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\django\utils\log.py  log_response  228  Not Found: /favicon.ico  
+2019-07-19 14:03:37,791  WARNING  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\django\utils\log.py  log_response  228  Not Found: /favicon.ico  
+2019-07-19 14:15:32,207  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 14:15:32,207  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 14:15:32 MDT)" (scheduled at 2019-07-19 14:15:32.200095-06:00)  
+2019-07-19 14:15:32,207  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 14:30:32.200095-06:00 (in 899.992253 seconds)  
+2019-07-19 14:15:32,395  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 14:30:32 MDT)" executed successfully  
+2019-07-19 14:15:33,910  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 14:15:33,910  INFO  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 14:15:33 MDT)" (scheduled at 2019-07-19 14:15:33.887192-06:00)  
+2019-07-19 14:15:33,910  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 14:30:33.887192-06:00 (in 899.976625 seconds)  
+2019-07-19 14:15:34,113  INFO  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 14:30:33 MDT)" executed successfully  
+2019-07-19 14:30:32,212  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 14:30:32,212  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 14:30:32 MDT)" (scheduled at 2019-07-19 14:30:32.200095-06:00)  
+2019-07-19 14:30:32,212  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 14:45:32.200095-06:00 (in 899.987787 seconds)  
+2019-07-19 14:30:32,352  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 14:45:32 MDT)" executed successfully  
+2019-07-19 14:30:33,889  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 14:30:33,889  INFO  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 14:30:33 MDT)" (scheduled at 2019-07-19 14:30:33.887192-06:00)  
+2019-07-19 14:30:33,889  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 14:45:33.887192-06:00 (in 899.997367 seconds)  
+2019-07-19 14:30:34,046  INFO  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 14:45:33 MDT)" executed successfully  
+2019-07-19 14:45:32,211  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 14:45:32,211  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 14:45:32 MDT)" (scheduled at 2019-07-19 14:45:32.200095-06:00)  
+2019-07-19 14:45:32,211  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 15:00:32.200095-06:00 (in 899.989036 seconds)  
+2019-07-19 14:45:32,335  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 15:00:32 MDT)" executed successfully  
+2019-07-19 14:45:33,903  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 14:45:33,903  INFO  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 14:45:33 MDT)" (scheduled at 2019-07-19 14:45:33.887192-06:00)  
+2019-07-19 14:45:33,903  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 15:00:33.887192-06:00 (in 899.983288 seconds)  
+2019-07-19 14:45:34,040  INFO  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 15:00:33 MDT)" executed successfully  
+2019-07-19 15:48:19,280  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 15:48:19,280  WARNING  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  120  Run time of job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 15:00:32 MDT)" was missed by 0:02:47.080354  
+2019-07-19 15:48:19,280  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 16:00:32.200095-06:00 (in 732.919646 seconds)  
+2019-07-19 15:48:20,967  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 15:48:20,967  WARNING  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  120  Run time of job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 15:00:33 MDT)" was missed by 0:02:47.080393  
+2019-07-19 15:48:20,967  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 16:00:33.887192-06:00 (in 732.919607 seconds)  
+2019-07-19 16:00:32,211  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:00:32,211  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 16:00:32 MDT)" (scheduled at 2019-07-19 16:00:32.200095-06:00)  
+2019-07-19 16:00:32,211  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 16:15:32.200095-06:00 (in 899.989051 seconds)  
+2019-07-19 16:00:32,352  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 16:15:32 MDT)" executed successfully  
+2019-07-19 16:00:33,899  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:00:33,899  INFO  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 16:00:33 MDT)" (scheduled at 2019-07-19 16:00:33.887192-06:00)  
+2019-07-19 16:00:33,899  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 16:15:33.887192-06:00 (in 899.988060 seconds)  
+2019-07-19 16:00:34,070  INFO  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 16:15:33 MDT)" executed successfully  
+2019-07-19 16:15:32,216  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:15:32,216  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 16:15:32 MDT)" (scheduled at 2019-07-19 16:15:32.200095-06:00)  
+2019-07-19 16:15:32,216  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 16:30:32.200095-06:00 (in 899.983392 seconds)  
+2019-07-19 16:15:32,372  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 16:30:32 MDT)" executed successfully  
+2019-07-19 16:15:33,903  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:15:33,903  INFO  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 16:15:33 MDT)" (scheduled at 2019-07-19 16:15:33.887192-06:00)  
+2019-07-19 16:15:33,903  DEBUG  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 16:30:33.887192-06:00 (in 899.983583 seconds)  
+2019-07-19 16:15:34,012  INFO  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 16:30:33 MDT)" executed successfully  
+2019-07-19 16:16:24,071  WARNING  20088  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\django\utils\log.py  log_response  228  Not Found: /favicon.ico  
+2019-07-19 16:30:11,185  INFO  18000  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  add_job  436  Adding job tentatively -- it will be properly scheduled when the scheduler starts  
+2019-07-19 16:30:11,185  INFO  18000  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _real_add_job  878  Added job "make_backup" to job store "default"  
+2019-07-19 16:30:11,185  INFO  18000  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  start  162  Scheduler started  
+2019-07-19 16:30:11,185  DEBUG  18000  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:30:11,185  DEBUG  18000  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 16:45:11.185852-06:00 (in 900.000000 seconds)  
+2019-07-19 16:30:32,201  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:30:32,206  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  123  Running job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 16:30:32 MDT)" (scheduled at 2019-07-19 16:30:32.200095-06:00)  
+2019-07-19 16:30:32,207  DEBUG  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 16:45:32.200095-06:00 (in 899.997876 seconds)  
+2019-07-19 16:30:32,363  INFO  22856  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\executors\base.py  run_job  144  Job "make_backup (trigger: interval[0:15:00], next run at: 2019-07-19 16:45:32 MDT)" executed successfully  
+2019-07-19 16:31:03,188  INFO  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  add_job  436  Adding job tentatively -- it will be properly scheduled when the scheduler starts  
+2019-07-19 16:31:03,188  INFO  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _real_add_job  878  Added job "make_backup" to job store "default"  
+2019-07-19 16:31:03,188  INFO  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  start  162  Scheduler started  
+2019-07-19 16:31:03,188  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:31:03,188  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 16:46:03.188485-06:00 (in 900.000000 seconds)  
+2019-07-19 16:31:12,799  WARNING  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\django\utils\log.py  log_response  228  Not Found: /favicon.ico  
+2019-07-19 16:31:21,708  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'renderer' plugin manager  
+2019-07-19 16:31:21,708  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'parser' plugin manager  
+2019-07-19 16:31:21,723  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'pyexcel-io reader' plugin manager  
+2019-07-19 16:31:21,723  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'pyexcel-io writer' plugin manager  
+2019-07-19 16:31:21,723  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  107  scanning for plugins...  
+2019-07-19 16:31:21,817  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_io  
+2019-07-19 16:31:21,817  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_webio  
+2019-07-19 16:31:21,817  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xls.xlsr.XLSBook as 'pyexcel-io reader' plugin  
+2019-07-19 16:31:21,817  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xls.xlsr.XLSBook later  
+2019-07-19 16:31:21,817  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xls.xlsw.XLSWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:31:21,817  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xls.xlsw.XLSWriter later  
+2019-07-19 16:31:21,817  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_xls  
+2019-07-19 16:31:21,817  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xlsx.xlsxr.XLSXBook as 'pyexcel-io reader' plugin  
+2019-07-19 16:31:21,817  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xlsx.xlsxr.XLSXBook later  
+2019-07-19 16:31:21,817  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xlsx.xlsxw.XLSXWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:31:21,817  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xlsx.xlsxw.XLSXWriter later  
+2019-07-19 16:31:21,817  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_xlsx  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.csvr.CSVBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.csvr.CSVBookReader later  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.tsv.TSVBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.tsv.TSVBookReader later  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.csvz.CSVZipBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.csvz.CSVZipBookReader later  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.tsvz.TSVZipBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.tsvz.TSVZipBookReader later  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.readers  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.csvw.CSVBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.csvw.CSVBookWriter later  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.tsv.TSVBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.tsv.TSVBookWriter later  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.csvz.CSVZipBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.csvz.CSVZipBookWriter later  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.tsvz.TSVZipBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.tsvz.TSVZipBookWriter later  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.writers  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.exporters.django.DjangoBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.exporters.django.DjangoBookReader later  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.exporters.sqlalchemy.SQLBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.exporters.sqlalchemy.SQLBookReader later  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.importers.django.DjangoBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.importers.django.DjangoBookWriter later  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.importers.sqlalchemy.SQLBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.importers.sqlalchemy.SQLBookWriter later  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.database  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  142  scanning done  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'source' plugin manager  
+2019-07-19 16:31:21,848  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  107  scanning for plugins...  
+2019-07-19 16:31:21,911  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_io  
+2019-07-19 16:31:21,911  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_webio  
+2019-07-19 16:31:21,911  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_xls  
+2019-07-19 16:31:21,926  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_xlsx  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.excel.ExcelParser as 'parser' plugin  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.excel.ExcelParser later  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter as 'parser' plugin  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter later  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.django.DjangoExporter as 'parser' plugin  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.django.DjangoExporter later  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.parsers  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.sqlalchemy.SQLAlchemyRenderer as 'renderer' plugin  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.sqlalchemy.SQLAlchemyRenderer later  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.django.DjangoRenderer as 'renderer' plugin  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.django.DjangoRenderer later  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.excel.ExcelRenderer as 'renderer' plugin  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.excel.ExcelRenderer later  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers._texttable.TextTableRenderer as 'renderer' plugin  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers._texttable.TextTableRenderer later  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.renderers  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.http.HttpSource as 'source' plugin  
+2019-07-19 16:31:21,942  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.http.HttpSource later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: url , url ,   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sheet_stream_source.SheetStreamSource as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sheet_stream_source.SheetStreamSource later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_input.ReadExcelFromFile as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_input.ReadExcelFromFile later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.memory_input.ReadExcelFileMemory as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.memory_input.ReadExcelFileMemory later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: csvz csv xls xlsx tsv xlsm ods tsvz , csvz csv xls xlsx tsv xlsm ods tsvz ,   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_output.WriteSheetToFile as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_output.WriteSheetToFile later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_output.WriteBookToFile as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_output.WriteBookToFile later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: csvz csv xls xlsx tsv xlsm ods tsvz texttable ,   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.output_to_memory.WriteBookToMemory as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.output_to_memory.WriteBookToMemory later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: csvz csv xls xlsx tsv xlsm ods tsvz texttable ,   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.bookdict.BookDictSource as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.bookdict.BookDictSource later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: bookdict , bookdict , bookdict , bookdict ,   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.dictsource.DictSource as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.dictsource.DictSource later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: dict , dict , dict , dict ,   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.arraysource.ArraySource as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.arraysource.ArraySource later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: array , array , array , array ,   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.records.RecordsSource as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.records.RecordsSource later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: records , records , records , records ,   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.django.SheetDjangoSource as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.django.SheetDjangoSource later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.django.BookDjangoSource as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.django.BookDjangoSource later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sqlalchemy.BookSQLSource as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sqlalchemy.BookSQLSource later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.querysets.SheetQuerySetSource as 'source' plugin  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.querysets.SheetQuerySetSource later  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.sources  
+2019-07-19 16:31:21,957  DEBUG  18904  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  142  scanning done  
+2019-07-19 16:31:22,051  ERROR  18904  C:\Users\M McCown\SCS\DataMan\Records\views.py  upload  247  UnboundLocalError("local variable 'read_map' referenced before assignment")  
+2019-07-19 16:32:59,334  INFO  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  add_job  436  Adding job tentatively -- it will be properly scheduled when the scheduler starts  
+2019-07-19 16:32:59,334  INFO  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _real_add_job  878  Added job "make_backup" to job store "default"  
+2019-07-19 16:32:59,334  INFO  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  start  162  Scheduler started  
+2019-07-19 16:32:59,334  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:32:59,350  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 16:47:59.334991-06:00 (in 899.984379 seconds)  
+2019-07-19 16:33:36,393  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'renderer' plugin manager  
+2019-07-19 16:33:36,393  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'parser' plugin manager  
+2019-07-19 16:33:36,409  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'pyexcel-io reader' plugin manager  
+2019-07-19 16:33:36,409  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'pyexcel-io writer' plugin manager  
+2019-07-19 16:33:36,409  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  107  scanning for plugins...  
+2019-07-19 16:33:36,471  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_io  
+2019-07-19 16:33:36,471  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_webio  
+2019-07-19 16:33:36,471  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xls.xlsr.XLSBook as 'pyexcel-io reader' plugin  
+2019-07-19 16:33:36,471  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xls.xlsr.XLSBook later  
+2019-07-19 16:33:36,471  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xls.xlsw.XLSWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:33:36,471  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xls.xlsw.XLSWriter later  
+2019-07-19 16:33:36,471  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_xls  
+2019-07-19 16:33:36,471  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xlsx.xlsxr.XLSXBook as 'pyexcel-io reader' plugin  
+2019-07-19 16:33:36,471  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xlsx.xlsxr.XLSXBook later  
+2019-07-19 16:33:36,471  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xlsx.xlsxw.XLSXWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:33:36,471  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xlsx.xlsxw.XLSXWriter later  
+2019-07-19 16:33:36,471  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_xlsx  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.csvr.CSVBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.csvr.CSVBookReader later  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.tsv.TSVBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.tsv.TSVBookReader later  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.csvz.CSVZipBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.csvz.CSVZipBookReader later  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.tsvz.TSVZipBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.tsvz.TSVZipBookReader later  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.readers  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.csvw.CSVBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.csvw.CSVBookWriter later  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.tsv.TSVBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.tsv.TSVBookWriter later  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.csvz.CSVZipBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.csvz.CSVZipBookWriter later  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.tsvz.TSVZipBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.tsvz.TSVZipBookWriter later  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.writers  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.exporters.django.DjangoBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.exporters.django.DjangoBookReader later  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.exporters.sqlalchemy.SQLBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.exporters.sqlalchemy.SQLBookReader later  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.importers.django.DjangoBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.importers.django.DjangoBookWriter later  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.importers.sqlalchemy.SQLBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.importers.sqlalchemy.SQLBookWriter later  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.database  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  142  scanning done  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'source' plugin manager  
+2019-07-19 16:33:36,487  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  107  scanning for plugins...  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_io  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_webio  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_xls  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_xlsx  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.excel.ExcelParser as 'parser' plugin  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.excel.ExcelParser later  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter as 'parser' plugin  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter later  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.django.DjangoExporter as 'parser' plugin  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.django.DjangoExporter later  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.parsers  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.sqlalchemy.SQLAlchemyRenderer as 'renderer' plugin  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.sqlalchemy.SQLAlchemyRenderer later  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.django.DjangoRenderer as 'renderer' plugin  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.django.DjangoRenderer later  
+2019-07-19 16:33:36,549  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.excel.ExcelRenderer as 'renderer' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.excel.ExcelRenderer later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers._texttable.TextTableRenderer as 'renderer' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers._texttable.TextTableRenderer later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.renderers  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.http.HttpSource as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.http.HttpSource later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: url , url ,   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sheet_stream_source.SheetStreamSource as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sheet_stream_source.SheetStreamSource later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_input.ReadExcelFromFile as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_input.ReadExcelFromFile later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.memory_input.ReadExcelFileMemory as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.memory_input.ReadExcelFileMemory later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: tsvz csvz tsv ods xlsx csv xls xlsm , tsvz csvz tsv ods xlsx csv xls xlsm ,   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_output.WriteSheetToFile as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_output.WriteSheetToFile later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_output.WriteBookToFile as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_output.WriteBookToFile later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: tsvz csvz tsv ods xlsx csv xls xlsm texttable ,   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.output_to_memory.WriteBookToMemory as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.output_to_memory.WriteBookToMemory later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: tsvz csvz tsv ods xlsx csv xls xlsm texttable ,   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.bookdict.BookDictSource as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.bookdict.BookDictSource later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: bookdict , bookdict , bookdict , bookdict ,   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.dictsource.DictSource as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.dictsource.DictSource later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: dict , dict , dict , dict ,   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.arraysource.ArraySource as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.arraysource.ArraySource later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: array , array , array , array ,   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.records.RecordsSource as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.records.RecordsSource later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: records , records , records , records ,   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.django.SheetDjangoSource as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.django.SheetDjangoSource later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.django.BookDjangoSource as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.django.BookDjangoSource later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sqlalchemy.BookSQLSource as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sqlalchemy.BookSQLSource later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.querysets.SheetQuerySetSource as 'source' plugin  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.querysets.SheetQuerySetSource later  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.sources  
+2019-07-19 16:33:36,565  DEBUG  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  142  scanning done  
+2019-07-19 16:33:36,659  ERROR  16312  C:\Users\M McCown\SCS\DataMan\Records\views.py  upload  247  UnboundLocalError("local variable 'read_map' referenced before assignment")  
+2019-07-19 16:34:48,321  WARNING  16312  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\django\utils\log.py  log_response  228  Not Found: /favicon.ico  
+2019-07-19 16:34:49,758  ERROR  16312  C:\Users\M McCown\SCS\DataMan\Records\views.py  upload  247  UnboundLocalError("local variable 'read_map' referenced before assignment")  
+2019-07-19 16:35:07,339  INFO  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  add_job  436  Adding job tentatively -- it will be properly scheduled when the scheduler starts  
+2019-07-19 16:35:07,339  INFO  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _real_add_job  878  Added job "make_backup" to job store "default"  
+2019-07-19 16:35:07,339  INFO  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  start  162  Scheduler started  
+2019-07-19 16:35:07,339  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:35:07,339  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 16:50:07.339290-06:00 (in 900.000000 seconds)  
+2019-07-19 16:35:13,247  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'renderer' plugin manager  
+2019-07-19 16:35:13,247  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'parser' plugin manager  
+2019-07-19 16:35:13,247  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'pyexcel-io reader' plugin manager  
+2019-07-19 16:35:13,247  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'pyexcel-io writer' plugin manager  
+2019-07-19 16:35:13,247  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  107  scanning for plugins...  
+2019-07-19 16:35:13,309  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_io  
+2019-07-19 16:35:13,309  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_webio  
+2019-07-19 16:35:13,309  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xls.xlsr.XLSBook as 'pyexcel-io reader' plugin  
+2019-07-19 16:35:13,309  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xls.xlsr.XLSBook later  
+2019-07-19 16:35:13,309  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xls.xlsw.XLSWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:35:13,309  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xls.xlsw.XLSWriter later  
+2019-07-19 16:35:13,309  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_xls  
+2019-07-19 16:35:13,309  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xlsx.xlsxr.XLSXBook as 'pyexcel-io reader' plugin  
+2019-07-19 16:35:13,309  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xlsx.xlsxr.XLSXBook later  
+2019-07-19 16:35:13,309  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xlsx.xlsxw.XLSXWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:35:13,309  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xlsx.xlsxw.XLSXWriter later  
+2019-07-19 16:35:13,309  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_xlsx  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.csvr.CSVBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.csvr.CSVBookReader later  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.tsv.TSVBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.tsv.TSVBookReader later  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.csvz.CSVZipBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.csvz.CSVZipBookReader later  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.tsvz.TSVZipBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.tsvz.TSVZipBookReader later  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.readers  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.csvw.CSVBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.csvw.CSVBookWriter later  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.tsv.TSVBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.tsv.TSVBookWriter later  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.csvz.CSVZipBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.csvz.CSVZipBookWriter later  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.tsvz.TSVZipBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.tsvz.TSVZipBookWriter later  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.writers  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.exporters.django.DjangoBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.exporters.django.DjangoBookReader later  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.exporters.sqlalchemy.SQLBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.exporters.sqlalchemy.SQLBookReader later  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.importers.django.DjangoBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.importers.django.DjangoBookWriter later  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.importers.sqlalchemy.SQLBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.importers.sqlalchemy.SQLBookWriter later  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.database  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  142  scanning done  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'source' plugin manager  
+2019-07-19 16:35:13,325  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  107  scanning for plugins...  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_io  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_webio  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_xls  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_xlsx  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.excel.ExcelParser as 'parser' plugin  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.excel.ExcelParser later  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter as 'parser' plugin  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter later  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.django.DjangoExporter as 'parser' plugin  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.django.DjangoExporter later  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.parsers  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.sqlalchemy.SQLAlchemyRenderer as 'renderer' plugin  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.sqlalchemy.SQLAlchemyRenderer later  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.django.DjangoRenderer as 'renderer' plugin  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.django.DjangoRenderer later  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.excel.ExcelRenderer as 'renderer' plugin  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.excel.ExcelRenderer later  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers._texttable.TextTableRenderer as 'renderer' plugin  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers._texttable.TextTableRenderer later  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.renderers  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.http.HttpSource as 'source' plugin  
+2019-07-19 16:35:13,387  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.http.HttpSource later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: url , url ,   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sheet_stream_source.SheetStreamSource as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sheet_stream_source.SheetStreamSource later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_input.ReadExcelFromFile as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_input.ReadExcelFromFile later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.memory_input.ReadExcelFileMemory as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.memory_input.ReadExcelFileMemory later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: xlsx ods xlsm xls tsv csvz tsvz csv , xlsx ods xlsm xls tsv csvz tsvz csv ,   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_output.WriteSheetToFile as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_output.WriteSheetToFile later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_output.WriteBookToFile as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_output.WriteBookToFile later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: xlsx ods xlsm xls tsv csvz tsvz csv texttable ,   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.output_to_memory.WriteBookToMemory as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.output_to_memory.WriteBookToMemory later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: xlsx ods xlsm xls tsv csvz tsvz csv texttable ,   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.bookdict.BookDictSource as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.bookdict.BookDictSource later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: bookdict , bookdict , bookdict , bookdict ,   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.dictsource.DictSource as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.dictsource.DictSource later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: dict , dict , dict , dict ,   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.arraysource.ArraySource as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.arraysource.ArraySource later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: array , array , array , array ,   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.records.RecordsSource as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.records.RecordsSource later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: records , records , records , records ,   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.django.SheetDjangoSource as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.django.SheetDjangoSource later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.django.BookDjangoSource as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.django.BookDjangoSource later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sqlalchemy.BookSQLSource as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sqlalchemy.BookSQLSource later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.querysets.SheetQuerySetSource as 'source' plugin  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.querysets.SheetQuerySetSource later  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.sources  
+2019-07-19 16:35:13,403  DEBUG  17308  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  142  scanning done  
+2019-07-19 16:35:13,497  ERROR  17308  C:\Users\M McCown\SCS\DataMan\Records\views.py  upload  247  UnboundLocalError("local variable 'read_map' referenced before assignment")  
+2019-07-19 16:41:41,968  INFO  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  add_job  436  Adding job tentatively -- it will be properly scheduled when the scheduler starts  
+2019-07-19 16:41:41,968  INFO  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _real_add_job  878  Added job "make_backup" to job store "default"  
+2019-07-19 16:41:41,968  INFO  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  start  162  Scheduler started  
+2019-07-19 16:41:41,968  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:41:41,968  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 16:56:41.968809-06:00 (in 900.000000 seconds)  
+2019-07-19 16:41:52,675  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'renderer' plugin manager  
+2019-07-19 16:41:52,675  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'parser' plugin manager  
+2019-07-19 16:41:52,675  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'pyexcel-io reader' plugin manager  
+2019-07-19 16:41:52,675  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'pyexcel-io writer' plugin manager  
+2019-07-19 16:41:52,675  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  107  scanning for plugins...  
+2019-07-19 16:41:52,753  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_io  
+2019-07-19 16:41:52,753  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_webio  
+2019-07-19 16:41:52,753  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xls.xlsr.XLSBook as 'pyexcel-io reader' plugin  
+2019-07-19 16:41:52,753  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xls.xlsr.XLSBook later  
+2019-07-19 16:41:52,753  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xls.xlsw.XLSWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:41:52,753  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xls.xlsw.XLSWriter later  
+2019-07-19 16:41:52,753  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_xls  
+2019-07-19 16:41:52,753  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xlsx.xlsxr.XLSXBook as 'pyexcel-io reader' plugin  
+2019-07-19 16:41:52,753  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xlsx.xlsxr.XLSXBook later  
+2019-07-19 16:41:52,753  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xlsx.xlsxw.XLSXWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:41:52,753  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xlsx.xlsxw.XLSXWriter later  
+2019-07-19 16:41:52,753  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_xlsx  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.csvr.CSVBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.csvr.CSVBookReader later  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.tsv.TSVBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.tsv.TSVBookReader later  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.csvz.CSVZipBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.csvz.CSVZipBookReader later  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.tsvz.TSVZipBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.tsvz.TSVZipBookReader later  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.readers  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.csvw.CSVBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.csvw.CSVBookWriter later  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.tsv.TSVBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.tsv.TSVBookWriter later  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.csvz.CSVZipBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.csvz.CSVZipBookWriter later  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.tsvz.TSVZipBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.tsvz.TSVZipBookWriter later  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.writers  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.exporters.django.DjangoBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.exporters.django.DjangoBookReader later  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.exporters.sqlalchemy.SQLBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.exporters.sqlalchemy.SQLBookReader later  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.importers.django.DjangoBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.importers.django.DjangoBookWriter later  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.importers.sqlalchemy.SQLBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.importers.sqlalchemy.SQLBookWriter later  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.database  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  142  scanning done  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'source' plugin manager  
+2019-07-19 16:41:52,768  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  107  scanning for plugins...  
+2019-07-19 16:41:52,831  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_io  
+2019-07-19 16:41:52,831  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_webio  
+2019-07-19 16:41:52,831  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_xls  
+2019-07-19 16:41:52,831  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_xlsx  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.excel.ExcelParser as 'parser' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.excel.ExcelParser later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter as 'parser' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.django.DjangoExporter as 'parser' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.django.DjangoExporter later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.parsers  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.sqlalchemy.SQLAlchemyRenderer as 'renderer' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.sqlalchemy.SQLAlchemyRenderer later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.django.DjangoRenderer as 'renderer' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.django.DjangoRenderer later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.excel.ExcelRenderer as 'renderer' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.excel.ExcelRenderer later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers._texttable.TextTableRenderer as 'renderer' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers._texttable.TextTableRenderer later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.renderers  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.http.HttpSource as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.http.HttpSource later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: url , url ,   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sheet_stream_source.SheetStreamSource as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sheet_stream_source.SheetStreamSource later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_input.ReadExcelFromFile as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_input.ReadExcelFromFile later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.memory_input.ReadExcelFileMemory as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.memory_input.ReadExcelFileMemory later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: xls xlsx tsv xlsm csvz csv ods tsvz , xls xlsx tsv xlsm csvz csv ods tsvz ,   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_output.WriteSheetToFile as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_output.WriteSheetToFile later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_output.WriteBookToFile as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_output.WriteBookToFile later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: xls xlsx tsv xlsm csvz csv ods tsvz texttable ,   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.output_to_memory.WriteBookToMemory as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.output_to_memory.WriteBookToMemory later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: xls xlsx tsv xlsm csvz csv ods tsvz texttable ,   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.bookdict.BookDictSource as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.bookdict.BookDictSource later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: bookdict , bookdict , bookdict , bookdict ,   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.dictsource.DictSource as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.dictsource.DictSource later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: dict , dict , dict , dict ,   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.arraysource.ArraySource as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.arraysource.ArraySource later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: array , array , array , array ,   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.records.RecordsSource as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.records.RecordsSource later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: records , records , records , records ,   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.django.SheetDjangoSource as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.django.SheetDjangoSource later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.django.BookDjangoSource as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.django.BookDjangoSource later  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource as 'source' plugin  
+2019-07-19 16:41:52,847  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource later  
+2019-07-19 16:41:52,862  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sqlalchemy.BookSQLSource as 'source' plugin  
+2019-07-19 16:41:52,862  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sqlalchemy.BookSQLSource later  
+2019-07-19 16:41:52,862  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.querysets.SheetQuerySetSource as 'source' plugin  
+2019-07-19 16:41:52,862  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.querysets.SheetQuerySetSource later  
+2019-07-19 16:41:52,862  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.sources  
+2019-07-19 16:41:52,862  DEBUG  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  142  scanning done  
+2019-07-19 16:41:53,590  WARNING  24304  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\django\utils\log.py  log_response  228  Not Found: /favicon.ico  
+2019-07-19 16:45:51,730  INFO  5596  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  add_job  436  Adding job tentatively -- it will be properly scheduled when the scheduler starts  
+2019-07-19 16:45:51,730  INFO  5596  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _real_add_job  878  Added job "make_backup" to job store "default"  
+2019-07-19 16:45:51,730  INFO  5596  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  start  162  Scheduler started  
+2019-07-19 16:45:51,730  DEBUG  5596  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:45:51,730  DEBUG  5596  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 17:00:51.730303-06:00 (in 900.000000 seconds)  
+2019-07-19 16:45:53,292  INFO  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  add_job  436  Adding job tentatively -- it will be properly scheduled when the scheduler starts  
+2019-07-19 16:45:53,292  INFO  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _real_add_job  878  Added job "make_backup" to job store "default"  
+2019-07-19 16:45:53,292  INFO  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  start  162  Scheduler started  
+2019-07-19 16:45:53,292  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:45:53,292  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 17:00:53.292403-06:00 (in 900.000000 seconds)  
+2019-07-19 16:46:41,040  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'renderer' plugin manager  
+2019-07-19 16:46:41,040  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'parser' plugin manager  
+2019-07-19 16:46:41,040  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'pyexcel-io reader' plugin manager  
+2019-07-19 16:46:41,040  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'pyexcel-io writer' plugin manager  
+2019-07-19 16:46:41,040  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  107  scanning for plugins...  
+2019-07-19 16:46:41,103  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_io  
+2019-07-19 16:46:41,103  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_webio  
+2019-07-19 16:46:41,103  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xls.xlsr.XLSBook as 'pyexcel-io reader' plugin  
+2019-07-19 16:46:41,103  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xls.xlsr.XLSBook later  
+2019-07-19 16:46:41,103  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xls.xlsw.XLSWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:46:41,103  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xls.xlsw.XLSWriter later  
+2019-07-19 16:46:41,103  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_xls  
+2019-07-19 16:46:41,103  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xlsx.xlsxr.XLSXBook as 'pyexcel-io reader' plugin  
+2019-07-19 16:46:41,103  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xlsx.xlsxr.XLSXBook later  
+2019-07-19 16:46:41,103  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_xlsx.xlsxw.XLSXWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:46:41,103  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_xlsx.xlsxw.XLSXWriter later  
+2019-07-19 16:46:41,103  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_xlsx  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.csvr.CSVBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.csvr.CSVBookReader later  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.tsv.TSVBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.tsv.TSVBookReader later  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.csvz.CSVZipBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.csvz.CSVZipBookReader later  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.readers.tsvz.TSVZipBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.readers.tsvz.TSVZipBookReader later  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.readers  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.csvw.CSVBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.csvw.CSVBookWriter later  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.tsv.TSVBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.tsv.TSVBookWriter later  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.csvz.CSVZipBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.csvz.CSVZipBookWriter later  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.writers.tsvz.TSVZipBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.writers.tsvz.TSVZipBookWriter later  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.writers  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.exporters.django.DjangoBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.exporters.django.DjangoBookReader later  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.exporters.sqlalchemy.SQLBookReader as 'pyexcel-io reader' plugin  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.exporters.sqlalchemy.SQLBookReader later  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.importers.django.DjangoBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.importers.django.DjangoBookWriter later  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel_io.database.importers.sqlalchemy.SQLBookWriter as 'pyexcel-io writer' plugin  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel_io.database.importers.sqlalchemy.SQLBookWriter later  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel_io.database  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  142  scanning done  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  _register_class  339  declare 'source' plugin manager  
+2019-07-19 16:46:41,118  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  107  scanning for plugins...  
+2019-07-19 16:46:41,181  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_io  
+2019-07-19 16:46:41,181  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_webio  
+2019-07-19 16:46:41,181  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_xls  
+2019-07-19 16:46:41,181  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  133  ignored pyexcel_xlsx  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.excel.ExcelParser as 'parser' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.excel.ExcelParser later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter as 'parser' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.sqlalchemy.SQLAlchemyExporter later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.parsers.django.DjangoExporter as 'parser' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.parsers.django.DjangoExporter later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.parsers  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.sqlalchemy.SQLAlchemyRenderer as 'renderer' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.sqlalchemy.SQLAlchemyRenderer later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.django.DjangoRenderer as 'renderer' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.django.DjangoRenderer later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers.excel.ExcelRenderer as 'renderer' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers.excel.ExcelRenderer later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.renderers._texttable.TextTableRenderer as 'renderer' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.renderers._texttable.TextTableRenderer later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.renderers  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.http.HttpSource as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.http.HttpSource later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: url , url ,   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sheet_stream_source.SheetStreamSource as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sheet_stream_source.SheetStreamSource later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_input.ReadExcelFromFile as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_input.ReadExcelFromFile later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.memory_input.ReadExcelFileMemory as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.memory_input.ReadExcelFileMemory later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: csv xls xlsx tsv csvz ods xlsm tsvz , csv xls xlsx tsv csvz ods xlsm tsvz ,   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_output.WriteSheetToFile as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_output.WriteSheetToFile later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.file_output.WriteBookToFile as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.file_output.WriteBookToFile later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.output_to_memory.WriteSheetToMemory later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: csv xls xlsx tsv csvz ods xlsm tsvz texttable ,   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.output_to_memory.WriteBookToMemory as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.output_to_memory.WriteBookToMemory later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: csv xls xlsx tsv csvz ods xlsm tsvz texttable ,   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.bookdict.BookDictSource as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.bookdict.BookDictSource later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: bookdict , bookdict , bookdict , bookdict ,   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.dictsource.DictSource as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.dictsource.DictSource later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: dict , dict , dict , dict ,   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.arraysource.ArraySource as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.arraysource.ArraySource later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: array , array , array , array ,   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.pydata.records.RecordsSource as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.pydata.records.RecordsSource later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  130  Instance attribute: records , records , records , records ,   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\pyexcel\internal\source_plugin.py  _register_a_plugin_info  131  Source registry:   
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.django.SheetDjangoSource as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.django.SheetDjangoSource later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.django.BookDjangoSource as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.django.BookDjangoSource later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sqlalchemy.SheetSQLAlchemySource later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.sqlalchemy.BookSQLSource as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.sqlalchemy.BookSQLSource later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  add_a_plugin_instance  187  add pyexcel.plugins.sources.querysets.SheetQuerySetSource as 'source' plugin  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\plugin.py  load_me_later  257  load pyexcel.plugins.sources.querysets.SheetQuerySetSource later  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\utils.py  _do_import  56  found pyexcel.plugins.sources  
+2019-07-19 16:46:41,196  DEBUG  24216  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\lml\loader.py  scan_plugins_regex  142  scanning done  
+2019-07-19 16:49:34,928  INFO  7932  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  add_job  436  Adding job tentatively -- it will be properly scheduled when the scheduler starts  
+2019-07-19 16:49:34,928  INFO  7932  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _real_add_job  878  Added job "make_backup" to job store "default"  
+2019-07-19 16:49:34,928  INFO  7932  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  start  162  Scheduler started  
+2019-07-19 16:49:34,928  DEBUG  7932  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:49:34,928  DEBUG  7932  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 17:04:34.928002-06:00 (in 900.000000 seconds)  
+2019-07-19 16:49:47,521  INFO  13332  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  add_job  436  Adding job tentatively -- it will be properly scheduled when the scheduler starts  
+2019-07-19 16:49:47,521  INFO  13332  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _real_add_job  878  Added job "make_backup" to job store "default"  
+2019-07-19 16:49:47,522  INFO  13332  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  start  162  Scheduler started  
+2019-07-19 16:49:47,523  DEBUG  13332  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:49:47,523  DEBUG  13332  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 17:04:47.521525-06:00 (in 899.998005 seconds)  
+2019-07-19 16:50:15,665  INFO  12260  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  add_job  436  Adding job tentatively -- it will be properly scheduled when the scheduler starts  
+2019-07-19 16:50:15,665  INFO  12260  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _real_add_job  878  Added job "make_backup" to job store "default"  
+2019-07-19 16:50:15,665  INFO  12260  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  start  162  Scheduler started  
+2019-07-19 16:50:15,665  DEBUG  12260  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  937  Looking for jobs to run  
+2019-07-19 16:50:15,665  DEBUG  12260  C:\Users\MMCCOW~1\Envs\DJANGO~1\lib\site-packages\apscheduler\schedulers\base.py  _process_jobs  1017  Next wakeup is due at 2019-07-19 17:05:15.665117-06:00 (in 900.000000 seconds)  

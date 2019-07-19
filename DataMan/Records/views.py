@@ -219,7 +219,7 @@ def backup(request):
 def restore(filename):
     call_command('loaddata', filename, app_label='Records')
 
-start_job()
+
 #this method handles the upload page and
 #directs the sheet to the read-in method
 def upload(request, option = None):
@@ -238,16 +238,25 @@ def upload(request, option = None):
         if form.is_valid():
             file = request.FILES['_File']
             data = form.save(commit = False)
-            lead = data.lead
         try: #Catch invalid formats, etc.
             #if True: #Allows for effective debugging
             wb = openpyxl.load_workbook(file, data_only=True)
+
+            def get_lead(wb, read_map):
+                try:
+                    lead = wb[read_map['wsIn']][read_map['lead']].value
+                    return lead
+                except Exception as e:
+                    error_logger.error(repr(e))
+                    context = {'form':form,'upload_status':"Must specify project lead.",}
+                    return render(request, 'upload.html', context)
             #read_only = True sometimes causes sharing violations
             #because it doesn't close fully
             if wb['Input']['I3'].value == "Mass spec":
-                read_map = read_in_map_MS
+                lead = get_lead(wb, read_in_map_MS)
                 upload_summary = read_data(request, wb, lead, read_in_map_MS, []) #to be used in template
             elif wb['Input']['I3'].value == "Instrument Type":
+                lead = get_lead(wb, read_in_map_gen)
                 upload_summary = read_Individuals(wb[read_in_map_gen['wsIndiv']], read_in_map_gen, upload_summary)
                 upload_summary = read_data(request, wb, lead, read_in_map_gen, upload_summary)#"Upload Successful"
             else:
@@ -262,11 +271,7 @@ def upload(request, option = None):
             upload_status = "Read in error.\nPlease use one of the provided templates."
             upload_summary = ["Unknown format. Please use one of the provided templates."]
             request.session['upload_status'] = upload_status
-        print("finished Upload")
-        #print(upload_status)
-        #print(upload_summary)
-        #"""
-
+        print("Finished Upload")
         #saves summary of changes for report till confirm/delete option
         i = 0
         request.session['upload_summary'] = {}
@@ -540,7 +545,6 @@ def upload_confirm(request, option = None):
     return render(request, 'upload.html', context)
 def read_Individuals(wsInd, read_map, upload_summary):
     exp_n = wsInd[read_map['indivExp']].value
-    print (exp_n)
 
     if Experiment.objects.all().filter(_experimentName = exp_n).exists():
         exp = Experiment.objects.all().get(_experimentName = exp_n)

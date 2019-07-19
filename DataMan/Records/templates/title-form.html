@@ -5,6 +5,11 @@
 
 {% block content %}
 <h1 class="add-header">{{header}}</h1>
+  {% for key, value in buttons.items %}
+      <a class="nav-block" href="{% url value %}">
+          <p class="nav-block__title">{{key}}</p>
+      </a>
+  {% endfor %}
 <!---->
 <form name="entry" action="" method="post" enctype="multipart/form-data">
   {% csrf_token %}

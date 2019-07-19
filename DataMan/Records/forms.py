@@ -79,7 +79,7 @@ class UploadFileForm(forms.ModelForm):
     readFail = False
     class Meta:
         model = FileRead
-        fields = ['_File', 'lead']
+        fields = ['_File']
 
     def __init__(self,  *args, extraFields=None, **kwargs,):
         super(UploadFileForm, self).__init__(*args, **kwargs)
