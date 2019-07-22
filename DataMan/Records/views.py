@@ -1347,7 +1347,9 @@ class SampleDetailView(DetailView):
                 context['protocol_filename'] = basename(design.file().path)
                 context['protocol_download'] =design.file().url
 
-        extra = json.loads(context['sample'].extra_fields())
+        extra = context['sample'].extra_fields()
+        if not extra: extra = ""
+        extra = json.loads(extra)
         context['extra_fields'] = {}
         for i in extra:
             context['extra_fields'][i] = extra[i]
@@ -1376,8 +1378,9 @@ class DatasetDetailView(DetailView):
             if setting.file():
                 context['setting_filename'] = basename(setting.file().path)
                 context['setting_download'] = setting.file().url
-
-        extra = json.loads(context['dataset'].extra_fields())
+        e = context['dataset'].extra_fields()
+        if not e: e=""
+        extra = json.loads(e)
         context['extra_fields'] = {}
         for i in extra:
             context['extra_fields'][i] = extra[i]
@@ -1403,7 +1406,9 @@ class IndividualDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(IndividualDetailView, self).get_context_data(**kwargs)
-        extra = json.loads(context['individual'].extra_fields())
+        e = context['individual'].extra_fields()
+        if not e: e="" #prevents NoneType error
+        extra = json.loads(e)
         context['extra_fields'] = {}
         for i in extra:
             context['extra_fields'][i] = extra[i]
