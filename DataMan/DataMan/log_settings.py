@@ -5,7 +5,7 @@ LOGGING = {
 	'disable_existing_loggers': False,
 	'formatters':{
 		'large':{
-			'format':'%(asctime)s  %(levelname)s  %(process)d  %(pathname)s  %(funcName)s  %(lineno)d  %(message)s  '
+			'format':'%(asctime)s  %(levelname)s  %(process)d  %(pathname)s  %(funcName)s  Line %(lineno)d  %(message)s  '
 		},
 		'tiny':{
 			'format':'%(asctime)s  %(message)s  '
@@ -18,14 +18,6 @@ LOGGING = {
 			'when':'midnight',
 			'interval':1,
 			'filename':LOGS_FOLDER+'ErrorLoggers.log',
-			'formatter':'large',
-		},
-		'default_file':{
-			'level':'DEBUG',
-		       'class':'logging.handlers.TimedRotatingFileHandler',
-			'when':'midnight',
-			'interval':1,
-			'filename':LOGS_FOLDER+'DefaultLoggers.log',
 			'formatter':'large',
 		},
 		'info_file':{
@@ -50,16 +42,26 @@ LOGGING = {
                 'filename': LOGS_FOLDER+'django_request.log',
                 'formatter':'large',
 		},
+        'default_file': {
+                'level':'DEBUG',
+                'class':'logging.handlers.RotatingFileHandler',
+                'filename': LOGS_FOLDER+'AutoInfoDebugLog.log',
+                'formatter':'large',
+		},
 	},
 	'loggers':{
-        '': {
-            'handlers': ['default_file'],
-            'level': 'DEBUG',
-            'propagate': True
-        },
 		'error_logger':{
 			'handlers':['errors_file'],
-			'level':'WARNING',
+			'level':'ERROR',
+			'propagate':False,
+		},
+		'django.request': {
+			'handlers': ['errors_file','request_handler'],
+			'propagate': False
+		},
+		'debug_logger':{
+			'handlers':['debug_file'],
+			'level':'DEBUG',
 			'propagate':True,
 		},
 		'info_logger':{
@@ -67,13 +69,11 @@ LOGGING = {
 			'level':'INFO',
 			'propagate':True,
 		},
-		'debug_logger':{
-			'handlers':['debug_file'],
-			'level':'DEBUG',
-			'propagate':True,
-		},
-        'django.request': {
-            'handlers': ['request_handler'],
-		},
+
+        '': {
+            'handlers': ['default_file'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
 	},
 }

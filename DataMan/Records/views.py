@@ -219,7 +219,6 @@ def backup(request):
 def restore(filename):
     call_command('loaddata', filename, app_label='Records')
 
-
 #this method handles the upload page and
 #directs the sheet to the read-in method
 def upload(request, option = None):
