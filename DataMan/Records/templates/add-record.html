@@ -16,9 +16,14 @@
       {% csrf_token %}
 
       {% for field in form %}
-        <p class="form-title">{{ field.label }}</p>
+        {% if field.field.required %}
+          <p class="form-title">{{ field.label }} *</p>
+        {% else %}
+          <p class="form-title">{{ field.label }}</p>
+        {% endif %}
+
         {% for error in field.errors %}
-          {% if error != 'This field is required.' %}
+          {% if error == 'This field is required.' %}
             <p class="form-error">{{ error }}</p>
           {% endif %}
         {% endfor%}
@@ -27,7 +32,13 @@
       <br><br>
       <h3>{{secFormHeading}}</h3>
       {% for field in secForm %}
-        <p class="form-title">{{ field.label }}</p>
+
+        {% if field.field.required %}
+          <p class="form-title">{{ field.label }} *</p>
+        {% else %}
+          <p class="form-title">{{ field.label }}</p>
+        {% endif %}
+        
         {% for error in field.errors %}
           {% if error != 'This field is required.' %}
             <p class="form-error">{{ error }}</p>
