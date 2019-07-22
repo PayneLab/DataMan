@@ -75,10 +75,10 @@ class IndividualTable(tables.Table):
         model = Individual
         exclude = ['_individualID', '_extra_fields']
 
-        def __init__(self, *args, new_or_existing=None, **kwargs):
-            super(IndividualTable, self).__init__(*args, **kwargs)
-            if new_or_existing:
-                self.row_attrs = {
-                    'new-or-existing': lambda record: new_or_existing[record._individualIdentifier]
-                }
-            else: self.row_attrs = {'new-or-existing':'EXISTING'}
+    def __init__(self, *args, new_or_existing=None, **kwargs):
+        super(IndividualTable, self).__init__(*args, **kwargs)
+        if new_or_existing:
+            self.row_attrs = {
+                'new-or-existing': lambda record: new_or_existing[record._individualIdentifier]
+            }
+        else: self.row_attrs = {'new-or-existing':'EXISTING'}

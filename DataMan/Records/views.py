@@ -168,7 +168,7 @@ def start_job():
     if not scheduler.running: scheduler.start()
 def backup(request):
     start_job()
-    print("Tick, making backup")
+    #print("Tick, making backup")
     options = {'Restore'}
 
     if settings.BOX_CONFIG:
@@ -259,10 +259,7 @@ def upload(request, option = None):
             else:
                 upload_summary = ["Unknown format. Please use one of the provided templates."]
             wb.close()
-            upload_options = {
-                'Confirm': True,
-                'Cancel': False,
-            }
+            upload_options = ['Confirm', 'Cancel']
             request.session['upload_status'] = upload_status
         except:
             upload_status = "Read in error.\nPlease use one of the provided templates."
@@ -459,7 +456,8 @@ def upload_confirm(request, option = None):
         exi_new = {}
         for e in e_n_list:
             this_all.append(e[2])
-            exi_new[e[2]]=e[0]
+            if not e[2] in exi_new:
+                exi_new[e[2]]=e[0]
         these = []
         [these.append(x) for x in this_all if x not in these]
 
@@ -482,7 +480,7 @@ def upload_confirm(request, option = None):
             dataset_table_exists = True
         elif "Individual" in i:
             queryset = Individual.objects.filter(_individualIdentifier__in = these)
-            individual_table = IndividualTable(queryset.order_by('-pk'))
+            individual_table = IndividualTable(queryset.order_by('-pk'), new_or_existing=exi_new)
             individual_table_exists = True
 
         else: print ("\n\nUnknown Type: ", i)
@@ -493,11 +491,11 @@ def upload_confirm(request, option = None):
     if sample_table_exists: tables.append(sample_table)
     if dataset_table_exists: tables.append(dataset_table)
 
-    upload_options = {'Confirm', 'Cancel'}
+    upload_options = ['Confirm', 'Cancel']
     context = {}
 
     if request.GET.get('option') == "Confirm":
-        print ("confirm")
+        print ("Confirmed")
         context['upload_status'] = 'Saved'
         context['summary'] = ''
         try: del request.session['upload_summary']
@@ -508,7 +506,7 @@ def upload_confirm(request, option = None):
         return redirect('upload')
     elif request.GET.get('option') == 'Cancel':
         context['upload_status'] = 'Cancelling...'
-        print ("cancel")
+        print ("Canceled")
         try:
             #get rid of read in data
             upload_summary = request.session.get('upload_summary')
@@ -533,6 +531,12 @@ def upload_confirm(request, option = None):
                             #experiment, so we check if it exists
                             if Sample.objects.all().filter(_sampleName = v[2]).exists():
                                 s = Sample.objects.all().get(_sampleName = v[2])
+                                s.delete()
+                        elif 'Individual' in v[1]:
+                            #it's a sample -- it may have been deleted with the parent
+                            #experiment, so we check if it exists
+                            if Individual.objects.all().filter(_individualIdentifier = v[2]).exists():
+                                s = Individual.objects.all().get(_individualIdentifier = v[2])
                                 s.delete()
                         else: print (v, "Delete Unsuccessful")
             request.session['upload_status'] = 'Upload Cancelled'
@@ -566,7 +570,7 @@ def read_Individuals(wsInd, read_map, upload_summary):
         if not indivID: break
         if Individual.objects.all().filter(_individualIdentifier = indivID).exists():
             upload_summary.append([EXISTING, 'Individual:', indivID])
-            break
+            continue
 
         new_Ind = Individual(
             _individualIdentifier = indivID,
@@ -578,7 +582,6 @@ def read_Individuals(wsInd, read_map, upload_summary):
         )
 
         upload_summary.append([NEW, 'Individual:', indivID])
-
         new_Ind.save()
 
     return upload_summary
@@ -645,11 +648,9 @@ def process_missing_fields(request):
     #testing not verified
     form = forms.ListFieldsForm(extraFields = missing_fields)
     if request.method == 'POST':
-        print ("POST")
         #Checked and sent to form but not yet recorded
         form = forms.ListFieldsForm(request.POST)
         request.session['missing_field_data'] = form.data
-        print (form.data)
 
         upload_summary = request.session['upload_summary'] #to be used in template
         del request.session['missing_fields']
@@ -788,10 +789,8 @@ def dataset_exists_or_new(name, experiment, sample, row, wb, wsIn, wlRow, read_m
     ins_code = wsIn[read_map['inst_code']].value
     if ins_code == None: ins_code = ''
     else: ins_code = ' '+ins_code
-    print("\n\n\n", ins_code)
     e_n = inst_exists_or_new(str(wsIn[read_map['instrument_type_loc']].value)+ins_code)
     initInstrument = e_n[2]
-    print (initInstrument)
     if (e_n[0] == NEW): summary.append(e_n)
     if row != []:
         e_n = setting_exists_or_new(row[read_map['setting_loc']].value)
@@ -1348,7 +1347,6 @@ class SampleDetailView(DetailView):
         context = super(SampleDetailView, self).get_context_data(**kwargs)
         designSet = context['sample'].treatmentProtocol().all()
         for design in designSet:
-            print(design)
             context['protocol'] = design
             context['protocol.description'] = design.description()
             if design.file():
