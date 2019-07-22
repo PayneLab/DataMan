@@ -229,8 +229,6 @@ def upload(request, option = None):
     upload_summary = [("Upload summary:")]
     upload_options = {}
 
-    print("\nUpload Page")
-
     if request.method == 'POST' and request.POST.get('Submit') == 'Submit':
 
         print ("\nAttempting Upload")
@@ -281,7 +279,13 @@ def upload(request, option = None):
         request.session.modified = True
 
         return redirect ('upload_confirm')
-        """print("read in complete")
+        """#This code is intended to handle 'missing fields',
+        #Things in the excel that are required but blank.
+        #I think I'm going to do it differently, though.
+        #Since I have the read in inside a try-block,
+        #I'll just have it through a type of error
+        #that I can catch and report.
+        print("read in complete")
         if 'missing_fields' in request.session:
             del request.session['missing_fields']
         if 'missing_fields_data' in request.session:
@@ -448,6 +452,7 @@ def upload_confirm(request, option = None):
     exp_table_exists = False
     sample_table_exists = False
     dataset_table_exists = False
+    individual_table_exists = False
 
     for i in upload_by_types:
         e_n_list = upload_by_types[i]
@@ -461,6 +466,7 @@ def upload_confirm(request, option = None):
 
         if "QC" in i:
             print (i, "isn't yet a table")
+        elif i=='p': continue
 
         elif "Experiment" in i:
             experiment_set = Experiment.objects.all().filter(_experimentName__in=these)
@@ -475,11 +481,16 @@ def upload_confirm(request, option = None):
             queryset = Dataset.objects.filter(_datasetName__in = these)
             dataset_table = DatasetTable(queryset.order_by('-pk'), new_or_existing=exi_new)
             dataset_table_exists = True
+        elif "Individual" in i:
+            queryset = Individual.objects.filter(_individualIdentifier__in = these)
+            individual_table = IndividualTable(queryset.order_by('-pk'))
+            individual_table_exists = True
 
         else: print ("\n\nUnknown Type: ", i)
 
     tables=[]
     if exp_table_exists: tables.append(exp_table)
+    if individual_table_exists: tables.append(individual_table)
     if sample_table_exists: tables.append(sample_table)
     if dataset_table_exists: tables.append(dataset_table)
 
@@ -540,8 +551,6 @@ def upload_confirm(request, option = None):
     if upload_status != "Upload summary:":
         context['upload_status'] = upload_status
 
-    #Cancel options - currently functions
-    #on keep or delete
     return render(request, 'upload.html', context)
 def read_Individuals(wsInd, read_map, upload_summary):
     exp_n = wsInd[read_map['indivExp']].value
