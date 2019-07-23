@@ -5,8 +5,12 @@
 <link rel="stylesheet" href="{% static '/css/detail.css' %}" />
 <h2>{{ sample }}</h2>
 
+{% if sample.experiment %}
 <p><Strong>Experiment:</Strong><a href="{% url 'experiment-detail' sample.experiment.experimentID %}">
     {{sample.experiment}}</a></p>
+{% else %}
+    <p><i><Strong>- Experiment Not Set -</Strong></i></p>
+{%endif%}
 
 <Strong>Individuals:</Strong>
     {% if sample.individual.all.count != 0 %}
@@ -31,13 +35,18 @@
   <ul>
     {% for Protocol in sample.treatmentProtocol.all %}
       <li>{{Protocol}}</li>
-    {% if Protocol.description or Protocol.file%}
+    {% if Protocol.description or Protocol.files.all %}
       <ul>
           {% if Protocol.description %}
             <li>{{Protocol.description}}</li>
           {%endif%}
-          {% if sample.treatmentProtocol.file %}
-            <li>File: {{Protocol.file}}</li>
+
+          {% for file in Protocol.files.all %}
+            <li> <a href="{{ file.url }}" download>{{file}}</a> </li>
+          {%endfor%}
+
+          {% if setting.comments %}
+            <li>{{setting.comments}}</li>
           {%endif%}
       </ul>
     {% endif %}
@@ -51,6 +60,10 @@
 {% for i, val in extra_fields.items %}
   <p><Strong>{{i}}:</Strong> {{val }} </p>
 {%endfor%}
+
+{% if comments %}
+  <p><Strong>Comments:</Strong> {{ sample.comments }} </p>
+{%endif%}
 
 {% if sample.dataset_set.all.count != 0 %}
     <Strong>Datasets: </Strong>

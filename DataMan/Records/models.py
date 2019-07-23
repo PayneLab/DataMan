@@ -10,6 +10,7 @@ from django_mysql.models import ListTextField
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from os.path import basename
+from os.path import relpath
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -335,20 +336,24 @@ class CheckDuplicateStorage(FileSystemStorage):
         return super(CheckDuplicateStorage, self)._save(name, content)
 
 class File(models.Model):
-    _file = models.FileField('File', upload_to=settings.MEDIA_ROOT+'/files/%Y/', blank = False, storage=CheckDuplicateStorage())
+    _file = models.FileField('File', upload_to=settings.MEDIA_ROOT+'/files/%Y/',
+            blank = False, storage=CheckDuplicateStorage(), unique=True)
 
     def file(self):
         return self._file
+    def relative_path(self):
+        return relpath(self._file.path, settings.MEDIA_ROOT)
+    def url(self):
+        p = settings.MEDIA_URL
+        return (p + self.relative_path())
 
     def __str__(self):
-        return self._file.name
+        return basename(self._file.name)
 class detailedField(models.Model):
     _name = models.CharField(unique=True, primary_key=True,
             blank=False, null=False, max_length = 25, verbose_name= "Name")
     _description = models.TextField(verbose_name="Description",blank=True, null=True)
-    _file = models.FileField(verbose_name='Related file or images',
-        upload_to = settings.MEDIA_ROOT+'/files/%Y/', blank=True, null=True, storage=CheckDuplicateStorage())
-    _files = models.ManyToManyField('File', verbose_name="Files", blank=True)
+    _files = models.ManyToManyField('File', verbose_name="Related files or images", blank=True)
 
     class Meta:# this sets the default sort
         ordering = ['_name']
@@ -363,10 +368,6 @@ class detailedField(models.Model):
         return self._description
     def setDescription(self, value):
         self._description = value
-    def file(self):
-        return self._file
-    def setFile(self, value):
-        self._file = value
     def files(self):
         return self._files
     def addFile(self, file):

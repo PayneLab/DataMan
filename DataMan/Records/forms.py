@@ -20,31 +20,25 @@ STATUS_OPTIONS = [#Probably eventually replace with something not hard coded in
     ('Revoked','Revoked'),
     ('Replaced','Replaced')
     ]
-class FileForm(forms.ModelForm):
-    _file = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}), label = 'Upload New Files')
-    class Meta:
-        model = File
-        exclude = []
 
 class InstrumentForm(forms.ModelForm):
+    new_files = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}), label = 'Upload New ', required=False)
     class Meta:
         model = Instrument
-        exclude = []
+        fields = ['_name', '_description', '_files', 'new_files']
 class InstrumentSettingForm(forms.ModelForm):
+    new_files = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}), label = 'Upload New ', required=False)
     class Meta:
         model = InstrumentSetting
-        exclude = []
+        fields = ['_name', '_description', '_files', 'new_files']
 class ProtocolForm(forms.ModelForm):
+    new_files = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}), label = 'Upload New ', required=False)
     class Meta:
         model = Protocol
-        fields = ['_name', '_description', '_files']
+        fields = ['_name', '_description', '_files', 'new_files']
 
     def __init__(self, post_data = None, files_data = None):
         if post_data and files_data:
-            #self.files = files_data.get('_file_getter')
-            #print ('\n\n\n\nFiles\n')
-            #print (self.files)
-            #for i in self.files: print(i,'\t', type(i))
             return super(ProtocolForm, self).__init__(post_data, files_data)
         return super(ProtocolForm, self).__init__()
 
@@ -56,9 +50,10 @@ class fileStatusOptionForm(forms.ModelForm):
         model = fileStatusOption
         exclude = []
 class ExperimentalDesignForm(forms.ModelForm):
+    new_files = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}), label = 'Upload New ', required=False)
     class Meta:
         model = ExperimentalDesign
-        exclude = []
+        fields = ['_name', '_description', '_files', 'new_files']
 
 class DateInput(forms.DateInput):
     input_type = 'date'
@@ -132,7 +127,7 @@ class SelectExperiment(forms.ModelForm):
 class AddIndividualForm(forms.ModelForm):
     class Meta:
         model = Individual
-        exclude = ['_individualID','_extra_fields', '_experiment']
+        exclude = ['_individualID','_extra_fields']
     def __init__(self,  *args, extraFields=None, **kwargs,):
         super(AddIndividualForm, self).__init__(*args, **kwargs)
         if extraFields!=None:

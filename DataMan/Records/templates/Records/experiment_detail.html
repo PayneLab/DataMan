@@ -7,7 +7,42 @@
 <p><Strong>Project Lead:</Strong> {{experiment.projectLead}} </p>
 <p>    Team Members: {{experiment.teamMembers}}</p>
 <p><Strong>IRB Number:</Strong> {{experiment.IRB}} </p>
-<p><Strong>Experimental Design:</Strong> {{experiment.experimentalDesign}} </p>
+<p><Strong>Experimental Design:</Strong> {{design}}
+{% if design.description or design.files.all %}
+<ul>
+    {% if design.description %}
+      <li>{{design.description}}</li>
+    {%endif%}
+
+    {% for file in design.files.all %}
+      <li> <a href="{{ file.url }}" download>{{file}}</a> </li>
+    {%endfor%}
+
+    {% if extra_i %}
+      <li>Extra Fields for Individuals:<ul>
+        {% for i in extra_i %}
+        <li>{{i}}</li>
+        {%endfor%}</ul>
+      </li>
+    {%endif%}
+
+    {% if extra_s %}
+      <li>Extra Fields for Samples:<ul>
+        {% for i in extra_s %}
+        <li>{{i}}</li>
+        {%endfor%}</ul>
+      </li>
+    {%endif%}
+
+    {% if extra_d %}
+      <li>Extra Fields for Datasets:<ul>
+        {% for i in extra_d %}
+        <li>{{i}}</li>
+        {%endfor%}</ul>
+      </li>
+    {%endif%}
+</ul>
+{% endif %} </p>
 <p><Strong>Comments:</Strong></p><ul>{{experiment.comments}}</ul>
 <a class="nav-block" href="{% url 'edit-experiment' experiment.experimentID %}">
     <p class="nav-block__title">Edit</p>

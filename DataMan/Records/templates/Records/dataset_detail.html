@@ -16,15 +16,42 @@
     {% else %}
 <p> No Samples found. </p>
     {% endif %}
-<p>
-    <Strong>Instrument:</Strong> {{instrument}}
-</p>
-    <blockquote>{{instrument.description}}</blockquote>
-<a href={{instrument_download}}>
-    <blockquote>{{instrument_filename}}</blockquote>
-</a>
+<p><Strong>Instrument:</Strong> {{instrument}}
+  {% if instrument.description or instrument.files.all %}
+    <ul><ul>
+      {% if instrument.description %}
+        <li>{{instrument.description}}</li>
+      {%endif%}
 
-<p><Strong>Instrument Settings:</Strong> {{dataset.instrumentSetting}} </p>
+      {% for file in instrument.files.all %}
+          <li> <a href="{{ file.url }}" download>{{file}}</a> </li>
+      {%endfor%}
+
+      {% if setting.comments %}
+        <li>{{setting.comments}}</li>
+      {%endif%}
+  </ul></ul>
+  {%endif%}
+</p>
+
+<p><Strong>Instrument Settings:</Strong> {{setting}}
+  {% if setting.description or setting.files.all %}
+    <ul><ul>
+        {% if setting.description %}
+          <li>{{setting.description}}</li>
+        {%endif%}
+
+        {% for file in setting.files.all %}
+          <li> <a href="{{ file.url }}" download>{{file}}</a> </li>
+        {%endfor%}
+
+        {% if setting.comments %}
+          <li>{{setting.comments}}</li>
+        {%endif%}
+
+    </ul></ul>
+    {%endif%}
+</p>
 <p><Strong>Type of data generated:</Strong> {{dataset.type}} </p>
 <p><Strong>Operator:</Strong> {{dataset.type}}</p>
 <p><Strong>Status:</Strong> {{dataset.status}}</p>
@@ -41,6 +68,10 @@
 {% for i, val in extra_fields.items %}
   <p><Strong>{{i}}:</Strong> {{val }} </p>
 {%endfor%}
+
+{% if comments %}
+  <p><Strong>Comments:</Strong> {{ dataset.comments }} </p>
+{%endif%}
 
 <a class="nav-block" href="{% url 'edit-dataset' dataset.datasetID %}">
     <p class="nav-block__title">Edit</p>

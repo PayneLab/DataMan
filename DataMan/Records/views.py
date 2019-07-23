@@ -26,7 +26,6 @@ from django.core.management import call_command
 from django.core.files.storage import default_storage
 from openpyxl.worksheet.datavalidation import DataValidation
 from os import remove
-import json
 
 from apscheduler.schedulers.background import BackgroundScheduler
 scheduler = BackgroundScheduler()
@@ -852,7 +851,6 @@ def add_experiment(request):
 
     return render(request, 'add-record.html', context)
 def add_sample(request, experiment = None):
-
     if experiment == None:
         form = forms.SelectExperiment()# GetExperForm()
         buttons = {
@@ -1015,6 +1013,12 @@ def add_instrument(request, pk=None):
             form = forms.InstrumentForm(request.POST, request.FILES)
             if form.is_valid():
                 new_inst = form.save()
+                if request.FILES:
+                    for f in request.FILES.getlist('new_files'):
+                        files_list.append(f)
+                        obj = File.objects.create(_file=f)
+                        new_inst.addFile(obj)
+                new_inst.save()
                 return redirect('add-dataset')
     context = {
         'form':form,
@@ -1036,6 +1040,12 @@ def add_instrument_setting(request, pk=None):
             form = forms.InstrumentSettingForm(request.POST, request.FILES)
             if form.is_valid():
                 new_inst = form.save()
+                if request.FILES:
+                    for f in request.FILES.getlist('new_files'):
+                        files_list.append(f)
+                        obj = File.objects.create(_file=f)
+                        new_inst.addFile(obj)
+                new_inst.save()
                 return redirect('add-dataset')
     context = {
         'form':form,
@@ -1054,24 +1064,22 @@ def add_protocol(request, pk=None):
                 return redirect('add-sample')
     else:
         form = forms.ProtocolForm()
-        secForm = forms.FileForm()
         if request.method == 'POST':
             form = forms.ProtocolForm(request.POST, request.FILES)
             files_list = []
             if form.is_valid():
                 new_inst = form.save()
                 if request.FILES:
-                    for f in request.FILES.getlist('_file'):
+                    for f in request.FILES.getlist('new_files'):
                         files_list.append(f)
                         obj = File.objects.create(_file=f)
                         new_inst.addFile(obj)
-                    #add the files to the protocol
+                new_inst.save()
 
                 return redirect('add-sample')
     context = {
         'form':form,
         'header':'Add Protocol',
-        'secForm':secForm,
     }
     return render(request, 'add-record.html', context)
 def add_file_status(request, pk=None):
@@ -1346,15 +1354,9 @@ class SampleDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(SampleDetailView, self).get_context_data(**kwargs)
         designSet = context['sample'].treatmentProtocol().all()
-        for design in designSet:
-            context['protocol'] = design
-            context['protocol.description'] = design.description()
-            if design.file():
-                context['protocol_filename'] = basename(design.file().path)
-                context['protocol_download'] =design.file().url
 
         extra = context['sample'].extra_fields()
-        if not extra: extra = ""
+        if not extra: extra = "{}"
         extra = json.loads(extra)
         context['extra_fields'] = {}
         for i in extra:
@@ -1368,24 +1370,11 @@ class DatasetDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(DatasetDetailView, self).get_context_data(**kwargs)
-        instrument = context['dataset'].instrument()
-        context['instrument'] = instrument
+        context['instrument'] =  context['dataset'].instrument()
+        context['setting'] = context['dataset'].instrumentSetting()
 
-        context['instrument.description'] = instrument.description()
-        if instrument.file():
-            context['instrument_filename'] = basename(instrument.file().path)
-            context['instrument_download'] =instrument.file().url
-
-        setting = context['dataset'].instrumentSetting()
-        context['setting'] = setting
-
-        if setting != None:
-            context['setting.description'] = setting.description()
-            if setting.file():
-                context['setting_filename'] = basename(setting.file().path)
-                context['setting_download'] = setting.file().url
         e = context['dataset'].extra_fields()
-        if not e: e=""
+        if not e: e="{}"
         extra = json.loads(e)
         context['extra_fields'] = {}
         for i in extra:
@@ -1400,11 +1389,11 @@ class ExperimentDetailView(DetailView):
         context = super(ExperimentDetailView, self).get_context_data(**kwargs)
         design = context['experiment'].experimentalDesign()
         context['design'] = design
-        if design != None:
-            context['design.description'] = design.description()
-            if design.file():
-                context['design_filename'] = basename(design.file().path)
-                context['design_download'] = design.file().url
+        if design:
+            context['extra_i'] = design.extra_fields()
+            context['extra_s'] = design.extra_fields_samples()
+            context['extra_d'] = design.extra_fields_datasets()
+
         return context
 class IndividualDetailView(DetailView):
     model = Individual
@@ -1413,7 +1402,7 @@ class IndividualDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super(IndividualDetailView, self).get_context_data(**kwargs)
         e = context['individual'].extra_fields()
-        if not e: e="" #prevents NoneType error
+        if not e: e="{}" #prevents NoneType error
         extra = json.loads(e)
         context['extra_fields'] = {}
         for i in extra:

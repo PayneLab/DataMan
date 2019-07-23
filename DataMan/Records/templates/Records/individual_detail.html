@@ -4,8 +4,12 @@
 {% block content %}
 <link rel="stylesheet" href="{% static '/css/detail.css' %}" />
 <h2>{{ individual }}</h2>
-<p><Strong>Experiment:</Strong><a href="{% url 'experiment-detail' individual.experiment.experimentID %}">
+{% if individual.experiment %}
+    <p><Strong>Experiment:</Strong><a href="{% url 'experiment-detail' individual.experiment.experimentID %}">
     {{individual.experiment}}</a></p>
+{% else %}
+    <p><i><Strong>- Experiment Not Set -</Strong></i></p>
+{%endif%}
 <p><Strong>Gender:</Strong> {{individual.gender}} </p>
 <p><Strong>Age:</Strong> {{individual.age}} </p>
 <p><Strong>Health Status:</Strong> {{individual.healthStatus}} </p>
