@@ -47,6 +47,9 @@
 <a class="nav-block" href="{% url 'edit-experiment' experiment.experimentID %}">
     <p class="nav-block__title">Edit</p>
 </a>
+<a class="nav-block" href="{% url 'edit-experiment' experiment.experimentID %}?copy=1">
+    <p class="nav-block__title">Copy</p>
+</a>
 </br></br>
 {% if experiment.sample_set.all.count != 0 %}
     <Strong>Samples:</Strong>

@@ -76,5 +76,8 @@
 <a class="nav-block" href="{% url 'edit-dataset' dataset.datasetID %}">
     <p class="nav-block__title">Edit</p>
 </a>
+<a class="nav-block" href="{% url 'edit-dataset' dataset.datasetID %}?copy=1">
+    <p class="nav-block__title">Copy</p>
+</a>
 </br></br>
 {% endblock %}

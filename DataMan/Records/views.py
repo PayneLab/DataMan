@@ -1127,6 +1127,24 @@ def add_experimental_design(request, pk=None):
 
 def edit_dataset(request, pk):
     dataset = Dataset.objects.get(pk=pk or None)
+    #separates sample
+    if request.method == 'GET' and 'copy' in request.GET and request.GET['copy']:
+        copy=True
+        dataset.pk=None
+
+        #meet unique constraint
+        old = dataset.datasetName()
+        if 'COPY' in old: temp_name = old
+        else: temp_name = ("{old} COPY".format(old=old))
+        i = 1
+        while Dataset.objects.all().filter(_datasetName = temp_name).exists():
+            if 'COPY' in old: temp_name = ("{old} {i}".format(old =old, i=i))
+            else: temp_name = ("{old} COPY {i}".format(old =old, i=i))
+            i +=1
+        dataset.setDatasetName(temp_name)
+        dataset.save()
+        return redirect('edit-dataset', dataset.pk)
+
     form = forms.AddDatasetForm(instance = dataset)
     if request.method == 'POST':
         form =forms.AddDatasetForm(request.POST, instance = dataset)
@@ -1151,7 +1169,26 @@ def edit_dataset(request, pk):
     return render(request, 'add-record.html', context)
 def edit_sample(request, pk):
     sample = Sample.objects.get(pk=pk)
+    #separates sample
+    if request.method == 'GET' and 'copy' in request.GET and request.GET['copy']:
+        copy=True
+        sample.pk=None
+
+        #meet unique constraint
+        old = sample.sampleName()
+        if 'COPY' in old: temp_name = old
+        else: temp_name = ("{old} COPY".format(old =old))
+        i = 1
+        while Sample.objects.all().filter(_sampleName = temp_name).exists():
+            if 'COPY' in old: temp_name = ("{old} {i}".format(old =old, i=i))
+            else: temp_name = ("{old} COPY {i}".format(old =old, i=i))
+            i +=1
+        sample.setSampleName(temp_name)
+        sample.save()
+        return redirect('edit-sample', sample.pk)
+
     form = forms.AddSampleForm(instance = sample)
+
     if request.method == 'POST':
         form =forms.AddSampleForm(request.POST, instance = sample)
         if form.is_valid():
@@ -1180,6 +1217,24 @@ def edit_sample(request, pk):
     return render(request, 'add-record.html', context)
 def edit_individual(request, pk):
     indiv = Individual.objects.get(pk=pk)
+
+    #separates sample
+    if request.method == 'GET' and 'copy' in request.GET and request.GET['copy']:
+        indiv.pk=None
+
+        #meet unique constraint
+        old = indiv.individualIdentifier()
+        if 'COPY' in old: temp_name = old
+        else: temp_name = ("{old} COPY".format(old=old))
+        i = 1
+        while Individual.objects.all().filter(_individualIdentifier = temp_name).exists():
+            if 'COPY' in old: temp_name = ("{old} {i}".format(old =old, i=i))
+            else: temp_name = ("{old} COPY {i}".format(old =old, i=i))
+            i +=1
+        indiv.setIndividualIdentifier(temp_name)
+        indiv.save()
+        return redirect('edit-individual', indiv.pk)
+
     form = forms.AddIndividualForm(instance = indiv)
     if request.method == 'POST':
         form =forms.AddIndividualForm(request.POST, instance = indiv)
@@ -1196,6 +1251,22 @@ def edit_individual(request, pk):
     return render(request, 'add-record.html', context)
 def edit_experiment(request, pk):
     experiment = Experiment.objects.get(pk=pk)
+    #separates sample
+    if request.method == 'GET' and 'copy' in request.GET and request.GET['copy']:
+        experiment.pk=None
+        #meet unique constraint
+        old = experiment.experimentName()
+        if 'COPY' in old: temp_name = old
+        else: temp_name = ("{old} COPY".format(old=old))
+        i = 1
+        while Experiment.objects.all().filter(_experimentName = temp_name).exists():
+            if 'COPY' in old: temp_name = ("{old} {i}".format(old =old, i=i))
+            else: temp_name = ("{old} COPY {i}".format(old =old, i=i))
+            i +=1
+        experiment.setExperimentName(temp_name)
+        experiment.save()
+        return redirect('edit-experiment', experiment.pk)
+
     form = forms.AddExperimentForm(instance = experiment, ask_design=True)
     if request.method == 'POST':
         form =forms.AddExperimentForm(request.POST, instance = experiment, ask_design=True)

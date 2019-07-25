@@ -20,4 +20,7 @@
 <a class="nav-block" href="{% url 'edit-individual' individual.individualID %}">
     <p class="nav-block__title">Edit</p>
 </a>
+<a class="nav-block" href="{% url 'edit-individual' individual.individualID %}?copy=1">
+    <p class="nav-block__title">Copy</p>
+</a>
 {% endblock %}

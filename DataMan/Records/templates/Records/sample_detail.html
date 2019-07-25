@@ -80,5 +80,8 @@
 <a class="nav-block" href="{% url 'edit-sample' sample.sampleID %}">
     <p class="nav-block__title">Edit</p>
 </a>
+<a class="nav-block" href="{% url 'edit-sample' sample.sampleID %}?copy=1">
+    <p class="nav-block__title">Copy</p>
+</a>
 </br></br>
 {% endblock %}
