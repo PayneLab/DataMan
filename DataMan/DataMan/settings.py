@@ -143,3 +143,6 @@ for h in LOGGING['handlers']:
     if 'filename' in LOGGING['handlers'][h]:
         LOG_FILES.append(LOGGING['handlers'][h]['filename'])
 #All of the files associated with loggers
+
+if DEBUG and os.environ.get('RUN_MAIN', None) != 'true':
+    LOGGING = {}
