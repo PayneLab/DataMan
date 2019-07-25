@@ -4,6 +4,7 @@
 {% load staticfiles%}
 
 {% block content %}
+<link rel="stylesheet" href="{% static '/css/title-form.css' %}" />
 <h1 class="add-header">{{header}}</h1>
   {% for key, value in buttons.items %}
       <a class="nav-block" href="{% url value %}">
@@ -23,6 +24,6 @@
     {% endfor%}
     {{ field }}
   {% endfor %}
-    <input class="nav-block" type="submit" value="Submit" name="Submit" id="Submit">
+    <input class="submit" type="submit" value="Submit" name="Submit" id="Submit">
 </form>
 {% endblock %}
