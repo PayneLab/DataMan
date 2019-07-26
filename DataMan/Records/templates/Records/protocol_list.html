@@ -4,11 +4,22 @@
 {% load django_tables2 %}
 {% block content %}
 <h1>{{Title}}</h1>
-{% for i in protocol_list %}
-  <h3>Name: {{i}}</h3>
-  <ul>
-      <li>Description: {{i.description}}</li>
-      <li> File: {{i.file}}</li>
-  </ul>
+  {% for Protocol in protocol_list %}
+      <h3>{{Protocol}}</h3>
+    {% if Protocol.description or Protocol.files.all %}
+      <ul>
+          {% if Protocol.description %}
+            <li>{{Protocol.description}}</li>
+          {%endif%}
+
+          {% for file in Protocol.files.all %}
+            <li> <a href="{{ file.url }}" download>{{file}}</a> </li>
+          {%endfor%}
+
+          {% if Protocol.comments %}
+            <li>{{Protocol.comments}}</li>
+          {%endif%}
+      </ul>
+    {% endif %}
 {% endfor %}
 {% endblock %}

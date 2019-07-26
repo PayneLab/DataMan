@@ -10,7 +10,8 @@ from Records.models import Dataset, Sample, Experiment, Individual
 class DatasetTable(tables.Table):
     _datasetName = tables.LinkColumn('dataset-detail', args=[A('pk')])
     _experiment = tables.LinkColumn('experiment-detail', args=[A('_experiment.pk')])
-
+    _instrument =  tables.LinkColumn('instruments')
+    _instrumentSetting =  tables.LinkColumn('settings')
     _dateCreated = tables.DateTimeColumn(format ='M d, Y')
     #_acquisitionStart = tables.DateTimeColumn(format ='M d, Y h:m')
     #_acquisitionEnd = tables.DateTimeColumn(format ='M d, Y h:m')
@@ -31,6 +32,7 @@ class DatasetTable(tables.Table):
 class SampleTable(tables.Table):
     _sampleName = tables.LinkColumn('sample-detail', args=[A('pk')])
     _experiment = tables.LinkColumn('experiment-detail', args=[A('_experiment.pk')])
+    _treatmentProtocol = tables.ManyToManyColumn(linkify_item=('protocols', {}))
     #_individual = tables.LinkColumn('individual-detail', args=[A('_individual.pk')], empty_values=())
 
     _dateCreated = tables.DateTimeColumn(format ='M d, Y')
@@ -51,7 +53,8 @@ class SampleTable(tables.Table):
 
 class ExperimentTable(tables.Table):
     _experimentName = tables.LinkColumn('experiment-detail', args=[A('pk')])
-    _experimentalDesign = tables.TemplateColumn('{{record.experimentalDesign|slice:":25"}}...')
+    _experimentalDesign =  tables.LinkColumn('exp-designs')
+
     _comments = tables.TemplateColumn('{{record.comments|slice:":25"}}...')
 
     class Meta:

@@ -1,0 +1,35 @@
+{% extends "generic.html" %}
+{% load staticfiles%}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/detail.css' %}" />
+
+<h2>{{ name }}</h2>
+
+{% for i in field.info %}
+<p><Strong>{{i}}:</Strong>{{field[i]}}</p>
+{% endfor %}
+
+{% if field.sample.all.count != 0 %}
+<ul style="margin-left: 5px;">
+  <Strong>Samples:</Strong>
+    {% for Sample in field.sample.all %}
+    <li>
+        <a href="{% url 'sample-detail' Sample.sampleID %}"> {{Sample}} </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% if field.dataset.all.count != 0 %}
+<ul style="margin-left: 5px;">
+  <Strong>DataSets:</Strong>
+    {% for d in field.dataset.all %}
+    <li>
+        <a href="{% url 'dataset-detail' d.datasetID %}"> {{d}} </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% endblock %}

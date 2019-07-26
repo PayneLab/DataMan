@@ -69,9 +69,9 @@ urlpatterns = [
     path('instruments/', views.InstrumentView.as_view(), name = 'instruments'),
     path('settings/', views.SettingsView.as_view(), name = 'settings'),
     path('protocols/', views.ProtocolView.as_view(), name = 'protocols'),
-    path('experimint-designs/', views.ExpDesignView.as_view()),
+    path('experiment-designs/', views.ExpDesignView.as_view()),
     path('exp-designs/', views.ExpDesignView.as_view()),
-    path('experimintal-designs/', views.ExpDesignView.as_view(), name = 'exp-designs'),
+    path('experimental-designs/', views.ExpDesignView.as_view(), name = 'exp-designs'),
 
     path('samples/<int:pk>/', views.SampleDetailView.as_view(),
          name = 'sample-detail'),

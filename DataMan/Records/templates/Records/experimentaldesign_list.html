@@ -4,11 +4,45 @@
 {% load django_tables2 %}
 {% block content %}
 <h1>{{Title}}</h1>
-{% for i in experimentaldesign_list %}
-  <h3>Name: {{i}}</h3>
-  <ul>
-      <li>Description: {{i.description}}</li>
-      <li> File: {{i.file}}</li>
-  </ul>
+{% for item in experimentaldesign_list %}
+  <h3>{{item}}</h3>
+    {% if item.description or item.files.all %}
+      <ul>
+          {% if item.description %}
+            <li>{{item.description}}</li>
+          {%endif%}
+
+          {% for file in item.files.all %}
+            <li> <a href="{{ file.url }}" download>{{file}}</a> </li>
+          {%endfor%}
+
+          {% if item.extra_fields %}
+            <li>Extra Fields for Individuals:<ul>
+              {% for i in item.extra_fields %}
+              <li>{{i}}</li>
+              {%endfor%}</ul>
+            </li>
+          {%endif%}
+
+          {% if item.extra_fields_samples %}
+            <li>Extra Fields for Samples:<ul>
+              {% for i in item.extra_fields_samples %}
+              <li>{{i}}</li>
+              {%endfor%}</ul>
+            </li>
+          {%endif%}
+
+          {% if item.extra_fields_datasets %}
+            <li>Extra Fields for Datasets:<ul>
+              {% for i in item.extra_fields_datasets %}
+              <li>{{i}}</li>
+              {%endfor%}</ul>
+            </li>
+          {%endif%}
+          {% if item.comments %}
+            <li>{{item.comments}}</li>
+          {%endif%}
+      </ul>
+    {% endif %}
 {% endfor %}
 {% endblock %}

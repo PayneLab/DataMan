@@ -1508,3 +1508,17 @@ class IndividualDetailView(DetailView):
             context['extra_fields'][i] = extra[i]
 
         return context
+
+
+class InstrumentDetailView(DetailView):
+    model = Instrument
+    template_name = 'instrument_detail.html'
+class SettingsDetailView(DetailView):
+    model = InstrumentSetting
+    template_name = 'instrumentsetting_detail.html'
+class ProtocolDetailView(DetailView):
+    model = Protocol
+    template_name = 'protocol_detail.html'
+class ExpDesignDetailView(DetailView):
+    model = ExperimentalDesign
+    template_name = 'instrument_detail.html'
