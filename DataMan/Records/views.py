@@ -354,7 +354,6 @@ def read_data(request, wb, lead, read_map, upload_summary):
         if i[read_map['sample_name']].value is None:
             break
             #All done with samples
-
         #Otherwise read it in
         if read_map['experiment_global']:
             e_n = exp_exist_or_new(wsIn[read_map['experiment_loc']].value, lead)
@@ -375,23 +374,28 @@ def read_data(request, wb, lead, read_map, upload_summary):
             break #there isn't a dataset there
         #read in datasets
         sample_type = wlRow[read_map['wl_sample_type']].value
+        print (sample_type)
         if sample_type.startswith('QC'):
+            print (sample_type,'\n\n\n')
             qc_type = sample_type[3:]
             sample_name = str(lead+" lab QC "+qc_type)
             if Sample.objects.all().filter(_sampleName = sample_name).exists():
                 sample = Sample.objects.all().get(_sampleName = sample_name)
                 experiment = sample.experiment()
+                summary.append(["EXISTING", 'QC Sample: ', sample_name])
+                summary.append(["EXISTING", 'QC Experiment: ', experiment.experimentName()])
             else:
                 if not 'QC_exp' in read_map:
                     exp_name = (str(lead+" lab QC"))
                 else: exp_name = str(wsWL[read_map['QC_exp']].value)
-                #or wsIn if that's where QC information is defined'
+                #or wsIn if that's where QC information is defined
                 if Experiment.objects.all().filter(_experimentName = exp_name).exists():
                     experiment = Experiment.objects.all().get(_experimentName =exp_name,  _projectLead = lead)
-                    summary.append(["(DEFAULT)", 'QC Experiment: ', exp_name])
+                    summary.append(["EXISTING", 'QC Experiment: ', exp_name])
                 else:
                     experiment = Experiment( _experimentName = exp_name, _projectLead =  lead)
                     experiment.save()
+                    summary.append(["NEW", 'QC Experiment: ', exp_name])
                 sample = Sample(
                     _sampleName = sample_name,
                     _storageCondition = "QC",
@@ -400,7 +404,7 @@ def read_data(request, wb, lead, read_map, upload_summary):
                     _organism = "QC",
                     )
                 sample.save()
-                summary.append(["(DEFAULT)", 'QC Sample: ', sample_name])
+                summary.append(["NEW", 'QC Sample: ', sample_name])
             sampleRow = []
         else: #Not a QC - it's a sample defined on input
             sampleNum = wlRow[read_map['wl_sample_num']].value
@@ -414,7 +418,7 @@ def read_data(request, wb, lead, read_map, upload_summary):
         #"""
 
         e_n = dataset_exists_or_new(wlRow[read_map['dataset_name']].value, experiment, sample, sampleRow, wb, wsIn, wlRow, read_map)
-        if sample_type == 'QC': e_n[1] = "QC Dataset: "
+        if sample_type.startswith('QC'): e_n[1] = "QC Dataset: "
         summary.append(e_n)
 
     wlRow = None
@@ -441,6 +445,7 @@ def upload_confirm(request, option = None):
                 upload_by_types[record_type] = []
             upload_by_types[record_type].append(summary[i])
 
+    for i in summary: print (summary[i])
     if len(upload_summary) >1: summary = upload_summary[1:]
     upload_status = upload_summary[0]
 
@@ -448,6 +453,9 @@ def upload_confirm(request, option = None):
     sample_table_exists = False
     dataset_table_exists = False
     individual_table_exists = False
+    QC_exp_table_exists = False
+    QC_sample_table_exists = False
+    QC_dataset_table_exists = False
 
     for i in upload_by_types:
         e_n_list = upload_by_types[i]
@@ -461,15 +469,28 @@ def upload_confirm(request, option = None):
         [these.append(x) for x in this_all if x not in these]
 
         if "QC" in i:
-            print (i, "isn't yet a table")
-        elif i=='p': continue
+            if "Experiment" in i:
+                experiment_set = Experiment.objects.all().filter(_experimentName__in=these)
+                QC_exp_table = ExperimentTable(experiment_set.order_by('-_experimentName'), new_or_existing=exi_new)
+                QC_exp_table_exists = True
+            if "Sample" in i:
+                queryset = Sample.objects.filter(_sampleName__in = these)
+                QC_sample_table = SampleTable(queryset.order_by('-pk'), new_or_existing=exi_new)
+                QC_sample_table_exists = True
+            elif "Dataset" in i:
+                queryset = Dataset.objects.filter(_datasetName__in = these)
+                QC_dataset_table = DatasetTable(queryset.order_by('-pk'), new_or_existing=exi_new)
+                QC_dataset_table_exists = True
+            else: print (i, "isn't yet a table")
 
         elif "Experiment" in i:
             experiment_set = Experiment.objects.all().filter(_experimentName__in=these)
             exp_table = ExperimentTable(experiment_set.order_by('-_experimentName'), new_or_existing=exi_new)
             exp_table_exists = True
+
+        elif i=='p': continue
+
         elif "Sample" in i:
-            #separate QC so that doesn't overwrite set
             queryset = Sample.objects.filter(_sampleName__in = these)
             sample_table = SampleTable(queryset.order_by('-pk'), new_or_existing=exi_new)
             sample_table_exists = True
@@ -484,11 +505,18 @@ def upload_confirm(request, option = None):
 
         else: print ("\n\nUnknown Type: ", i)
 
+    # To get the tables in this order, we can't just append
+    #Them as they come.
     tables=[]
     if exp_table_exists: tables.append(exp_table)
     if individual_table_exists: tables.append(individual_table)
     if sample_table_exists: tables.append(sample_table)
     if dataset_table_exists: tables.append(dataset_table)
+    if QC_exp_table_exists:
+        tables.append(QCLabel([]))
+        tables.append(QC_exp_table)
+    if QC_sample_table_exists: tables.append(QC_sample_table)
+    if QC_dataset_table_exists: tables.append(QC_dataset_table)
 
     upload_options = ['Confirm', 'Cancel']
     context = {}

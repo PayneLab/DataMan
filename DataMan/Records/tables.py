@@ -37,7 +37,7 @@ class SampleTable(tables.Table):
 
     class Meta:
         model = Sample
-        fields = ['_experiment','_sampleName',
+        fields = ['_sampleName','_experiment','_sampleName',
                   '_storageCondition', '_storageLocation', '_treatmentProtocol',
                   '_dateCreated', '_individual', '_organism', '_organismModifications', '_comments']
 
@@ -82,3 +82,6 @@ class IndividualTable(tables.Table):
                 'new-or-existing': lambda record: new_or_existing[record._individualIdentifier]
             }
         else: self.row_attrs = {'new-or-existing':'EXISTING'}
+
+class QCLabel(tables.Table):
+    Quality_Controls = tables.Column()
