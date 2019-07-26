@@ -53,7 +53,7 @@ class ExperimentalDesignForm(forms.ModelForm):
     new_files = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}), label = 'Upload New ', required=False)
     class Meta:
         model = ExperimentalDesign
-        fields = ['_name', '_description', '_files', 'new_files']
+        fields = ['_name', '_description', '_files', 'new_files', '_extra_fields', '_extra_fields_samples','_extra_fields_datasets']
 
 class DateInput(forms.DateInput):
     input_type = 'date'
