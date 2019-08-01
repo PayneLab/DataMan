@@ -20,7 +20,7 @@ a.nav-block {
     width: 160px;
     background: #002e5d;
     color: #FEFEFE;
-    background: #BABABA;
+   /* background: #BABABA;*/
     display: grid;
 }
 input.nav-block {

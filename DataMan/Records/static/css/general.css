@@ -1,7 +1,7 @@
 body {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 58px 35px auto 78px;
+    grid-template-rows: 58px 35px auto 68px;
     color: #002e5d;
 }
 .content {
@@ -17,7 +17,8 @@ a {
 byu-menu.byu-component-rendered {
     position: sticky;
     top: 0px;
-    background-color: #FEFEFE;
+    /*background-color: #FEFEFE;*/
+    background-color: #002e5d
 }
 
 .form-error {
