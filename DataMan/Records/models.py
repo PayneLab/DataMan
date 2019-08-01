@@ -14,7 +14,7 @@ from os.path import relpath
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-#from pynotify.notify import notify
+from django.core.exceptions import ValidationError
 
 class Dataset(models.Model):
     _datasetName = models.TextField(verbose_name='Dataset Name',
@@ -58,7 +58,7 @@ class Dataset(models.Model):
         local_path = self._fileLocation
 
         if not remote_path and not local_path:
-            raise forms.ValidationError("A file path must be specified.")
+            raise ValidationError("A file path must be specified.")
 
 
     def get_absolute_url(self):
@@ -304,34 +304,16 @@ class Experiment(models.Model):
         return str(self._experimentName)
 
 class CheckDuplicateStorage(FileSystemStorage):
-    """def get_available_name(self, name, max_length=100):
-        if self.exists(name):
-            name = str(name+' 1')
-        return name
-        #"""
-
     def save(self, name, content, max_length=None):
-        print ("\n\nSaving File")
         if self.exists(name):
             old_copy = self.open(name, 'rb')
             if old_copy.size==content.size:
                 if old_copy.read()==content.read():
-                    print("True duplicate")
-                    tk.messagebox.showinfo('Duplicate File', "This file is already in our system and will not be uploaded again.")
-
+                    #The file is exactly the same as one already in the system.
                     return name
             #Same name, not the same file
-            #notify(title='Hello!')
-            """popup = tk.Tk()
-            popup.wm_title("!")
-            label = ttk.Label(popup, text="Duplicate Name", font=("Verdana", 10))
-            label.pack(side="top", fill="x", pady=10)
-            B1 = ttk.Button(popup, text="Okay", command = popup.destroy)
-            B1.pack()
-            popup.mainloop()
-            #"""
-            #msg_box = tk.messagebox.askquestion ('Warning: Duplicate Name','A file exists by this name, but is not the same file. Change name or cancel upload?',icon = 'warning')
-            #if popup == 'yes': print ("Yes was selected.")
+            #This is where I'd like to ask the user
+            raise ValidationError("There is a different file named %s" % basename(name))
 
         return super(CheckDuplicateStorage, self)._save(name, content)
 

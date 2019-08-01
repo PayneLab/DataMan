@@ -177,6 +177,7 @@ def backup(request):
         items = client.folder(folder_id=folder_id).get_items()
         remote_files = []
         for i in items: remote_files.append((i.id, i.name))
+        remote_files.sort(reverse=True)
     else: remote_files = []
 
     form = forms.BackUpSelectForm(remote_files=remote_files)
@@ -853,6 +854,26 @@ def dataset_exists_or_new(name, experiment, sample, row, wb, wsIn, wlRow, read_m
 
     return [NEW, 'Dataset: ', name]
 
+
+"""How detailField forms need to handle files"""
+def df_save_if_valid(FILES, form):
+    try:
+        file_objects = []
+        if FILES:
+            for f in FILES.getlist('new_files'):
+                obj = File.objects.create(_file=f)
+                file_objects.append(obj)
+
+        new_inst = form.save()
+        for obj in file_objects:
+            new_inst.addFile(obj)
+        new_inst.save()
+        return form
+    except ValidationError as e:
+        form._errors['new_files'] = e
+
+    return form
+
 """Page to add a sample"""
 def add_experiment(request):
     form = forms.AddExperimentForm()
@@ -861,20 +882,18 @@ def add_experiment(request):
         form =forms.AddExperimentForm(request.POST)
         desForm = forms.ExperimentalDesignForm(request.POST, request.FILES)
         if form.is_valid() and desForm.is_valid():
-            new_Experiment = form.save(commit = False)
-            newDes = desForm.save()
-            new_Experiment.setExperimentalDesign(newDes)
-            new_Experiment.save()
-            return redirect('experiments')
-    buttons = {
-        #'New Experimental Design': 'add-experimental-design',
-    }
+            desForm = df_save_if_valid(request.FILES, desForm)
+            if desForm.is_valid():
+                new_Experiment = form.save(commit = False)
+                new_Experiment.setExperimentalDesign(newDes)
+                new_Experiment.save()
+                return redirect('experiments')
     context = {
         'header':'Add Experiment',
         'form':form,
         'secFormHeading':'Experimental Design',
         'secForm':desForm,
-        'buttons':buttons
+        'buttons':{}
     }
 
     return render(request, 'add-record.html', context)
@@ -959,7 +978,7 @@ def add_dataset(request, experiment = None):
     form =forms.AddDatasetForm(extraFields = extra)
     if request.method == 'POST':
         if extra==None:extra = []
-        form =forms.AddDatasetForm(request.POST)
+        form =forms.AddDatasetForm(request.POST, extraFields = extra)
         if form.is_valid():
             new_Dataset = form.save()
             #parses to JSON
@@ -1040,14 +1059,9 @@ def add_instrument(request, pk=None):
         if request.method == 'POST':
             form = forms.InstrumentForm(request.POST, request.FILES)
             if form.is_valid():
-                new_inst = form.save()
-                if request.FILES:
-                    for f in request.FILES.getlist('new_files'):
-                        files_list.append(f)
-                        obj = File.objects.create(_file=f)
-                        new_inst.addFile(obj)
-                new_inst.save()
-                return redirect('add-dataset')
+                form = df_save_if_valid(request.FILES, form)
+                if form.is_valid():
+                    return redirect('add-dataset')
     context = {
         'form':form,
         'header':'Add Instrument'
@@ -1067,14 +1081,9 @@ def add_instrument_setting(request, pk=None):
         if request.method == 'POST':
             form = forms.InstrumentSettingForm(request.POST, request.FILES)
             if form.is_valid():
-                new_inst = form.save()
-                if request.FILES:
-                    for f in request.FILES.getlist('new_files'):
-                        files_list.append(f)
-                        obj = File.objects.create(_file=f)
-                        new_inst.addFile(obj)
-                new_inst.save()
-                return redirect('add-dataset')
+                form = df_save_if_valid(request.FILES, form)
+                if form.is_valid():
+                    return redirect('add-dataset')
     context = {
         'form':form,
         'header':'Add Instrument Setting'
@@ -1082,32 +1091,30 @@ def add_instrument_setting(request, pk=None):
     return render(request, 'add-record.html', context)
 
 def add_protocol(request, pk=None):
+    askNameForm = None
     if pk:
         inst = Protocol.objects.get(pk=pk or None)
         form = forms.ProtocolForm(instance=inst)
         if request.method == 'POST':
             form = forms.ProtocolForm(request.POST, request.FILES, instance=inst)
             if form.is_valid():
-                new_inst = form.save()
-                return redirect('add-sample')
+                form = df_save_if_valid(request.FILES, form)
+                if form.is_valid():
+                    return redirect('add-sample')
     else:
         form = forms.ProtocolForm()
         if request.method == 'POST':
             form = forms.ProtocolForm(request.POST, request.FILES)
-            files_list = []
             if form.is_valid():
-                new_inst = form.save()
-                if request.FILES:
-                    for f in request.FILES.getlist('new_files'):
-                        files_list.append(f)
-                        obj = File.objects.create(_file=f)
-                        new_inst.addFile(obj)
-                new_inst.save()
+                form = df_save_if_valid(request.FILES, form)
+                if form.is_valid():
+                    return redirect('add-sample')
+                #askNameForm = forms.QuestionForm(question="Enter a new name for the file:")
 
-                return redirect('add-sample')
     context = {
         'form':form,
         'header':'Add Protocol',
+        'secForm':askNameForm
     }
     return render(request, 'add-record.html', context)
 def add_file_status(request, pk=None):
@@ -1138,15 +1145,17 @@ def add_experimental_design(request, pk=None):
         if request.method == 'POST':
             form = forms.ExperimentalDesignForm(request.POST, request.FILES, instance=inst)
             if form.is_valid():
-                new_inst = form.save()
-                return redirect('add-dataset')
+                form = df_save_if_valid(request.FILES, form)
+                if form.is_valid():
+                    return redirect('add-dataset')
     else:
         form = forms.ExperimentalDesignForm()
         if request.method == 'POST':
             form = forms.ExperimentalDesignForm(request.POST, request.FILES)
             if form.is_valid():
-                newDes = form.save()
-                return redirect('add-experiment')
+                form = df_save_if_valid(request.FILES, form)
+                if form.is_valid():
+                    return redirect('add-experiment')
     context = {
         'form':form,
         'header':'Add Experimental Design'
