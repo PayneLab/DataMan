@@ -153,6 +153,7 @@ class AddDatasetForm(forms.ModelForm):
             for f in extraFields:
                 self.fields[f] = forms.CharField(label=f)
 
+
 class AddExperimentForm(forms.ModelForm):
     class Meta:
         model = Experiment
@@ -168,6 +169,7 @@ class AddExperimentForm(forms.ModelForm):
 class BackUpSelectForm(forms.Form):
 	source = forms.CharField(label='Use backup from:', widget=forms.Select(choices=[('Local', 'Local'), ('Box', 'Box')]))
 	file = forms.FilePathField(label='Restore from local', path=settings.BACKUP_LOCATION, allow_folders=False)
+	file.choices.sort(reverse=True)
 
 	def __init__(self, *args, **kwargs):
 		remote_files = kwargs.pop('remote_files', None)

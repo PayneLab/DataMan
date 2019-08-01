@@ -39,7 +39,7 @@ class SampleTable(tables.Table):
 
     class Meta:
         model = Sample
-        fields = ['_sampleName','_experiment','_sampleName',
+        fields = ['_sampleName','_experiment',
                   '_storageCondition', '_storageLocation', '_treatmentProtocol',
                   '_dateCreated', '_individual', '_organism', '_organismModifications', '_comments']
 

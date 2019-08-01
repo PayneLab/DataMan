@@ -177,6 +177,7 @@ def backup(request):
         items = client.folder(folder_id=folder_id).get_items()
         remote_files = []
         for i in items: remote_files.append((i.id, i.name))
+        remote_files.sort(reverse=True)
     else: remote_files = []
 
     form = forms.BackUpSelectForm(remote_files=remote_files)
@@ -959,7 +960,7 @@ def add_dataset(request, experiment = None):
     form =forms.AddDatasetForm(extraFields = extra)
     if request.method == 'POST':
         if extra==None:extra = []
-        form =forms.AddDatasetForm(request.POST)
+        form =forms.AddDatasetForm(request.POST, extraFields = extra)
         if form.is_valid():
             new_Dataset = form.save()
             #parses to JSON

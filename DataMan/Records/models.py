@@ -14,6 +14,7 @@ from os.path import relpath
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
+from django.core.exceptions import ValidationError
 #from pynotify.notify import notify
 
 class Dataset(models.Model):
@@ -58,7 +59,7 @@ class Dataset(models.Model):
         local_path = self._fileLocation
 
         if not remote_path and not local_path:
-            raise forms.ValidationError("A file path must be specified.")
+            raise ValidationError("A file path must be specified.")
 
 
     def get_absolute_url(self):
