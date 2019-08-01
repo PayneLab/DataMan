@@ -176,3 +176,11 @@ class BackUpSelectForm(forms.Form):
 		super(BackUpSelectForm, self).__init__(*args, **kwargs)
 		if remote_files:
 			self.fields['remote_file'] = forms.CharField(label='Restore from Box', widget=forms.Select(choices=remote_files))
+
+class QuestionForm(forms.Form):
+    answer=forms.CharField(label="Question", required=False)
+
+    def __init__(self, *args, **kwargs):
+        question = kwargs.pop('question', None)
+        super(QuestionForm, self).__init__(*args, **kwargs)
+        if question: self.fields['answer'] = forms.CharField(label=question, required=False)
