@@ -884,6 +884,7 @@ def add_experiment(request):
         if form.is_valid() and desForm.is_valid():
             desForm = df_save_if_valid(request.FILES, desForm)
             if desForm.is_valid():
+                newDes = desForm.save()
                 new_Experiment = form.save(commit = False)
                 new_Experiment.setExperimentalDesign(newDes)
                 new_Experiment.save()
