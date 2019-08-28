@@ -10,11 +10,10 @@ h1{
 .nav-block {
     height: 40px;
     border-radius: 10px;
-    margin: auto;
+    margin-top: 10px;  /* This is for spacing around the download template buttons */
     transition: top .3s linear;
     position: relative;
     top: 0;
-    margin: 25;
 }
 
 .nav-block__title {
