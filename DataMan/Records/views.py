@@ -332,11 +332,17 @@ def read_data(request, wb, lead, read_map, upload_summary):
                 except: IRB = None
             else: IRB = None
             if 'team' in read_map:
-                team = ''
+                # the original Price template did not include team members,
+                # so we check this first.
+                team = []
                 for i in read_map['team']:
+                    #multiple cells - allows dropdown with lab member names
+                    #The alternative possibility is that the user put them all
+                    # in the first cell, which is fine.
                     if wsIn[i].value != None:
-                        team += str(wsIn[i].value)
-                        team += ', '
+                        member_name = (wsIn[i].value).strip(' ')
+                        team.append(member_name)
+                team = ', '.join(team)# clean joins
             else: team = None
             if 'description' in read_map:
                 des = wsIn[read_map['description']].value
@@ -379,7 +385,7 @@ def read_data(request, wb, lead, read_map, upload_summary):
         if sample_type.startswith('QC'):
             print (sample_type,'\n\n\n')
             qc_type = sample_type[3:]
-            sample_name = str(lead+" lab QC "+qc_type)
+            sample_name = str(lead+" lab QC "+qc_type).strip()
             if Sample.objects.all().filter(_sampleName = sample_name).exists():
                 sample = Sample.objects.all().get(_sampleName = sample_name)
                 experiment = sample.experiment()
@@ -387,7 +393,7 @@ def read_data(request, wb, lead, read_map, upload_summary):
                 summary.append(["EXISTING", 'QC Experiment: ', experiment.experimentName()])
             else:
                 if not 'QC_exp' in read_map:
-                    exp_name = (str(lead+" lab QC"))
+                    exp_name = (str(lead+" lab QC")).strip()
                 else: exp_name = str(wsWL[read_map['QC_exp']].value)
                 #or wsIn if that's where QC information is defined
                 if Experiment.objects.all().filter(_experimentName = exp_name).exists():
@@ -894,7 +900,6 @@ def add_experiment(request):
         'form':form,
         'secFormHeading':'Experimental Design',
         'secForm':desForm,
-        'buttons':{}
     }
 
     return render(request, 'add-record.html', context)

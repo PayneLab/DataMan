@@ -18,7 +18,7 @@ class DatasetTable(tables.Table):
 
     class Meta:
         model = Dataset
-        exclude = ['_datasetID','_sample','_acquisitionStart','_acquisitionEnd','_fileHash', '_extra_fields']
+        exclude = ['_datasetID','_sample','_acquisitionEnd','_fileHash', '_extra_fields']
 
 
     def __init__(self, *args, new_or_existing=None, **kwargs):
