@@ -18,7 +18,6 @@ urlpatterns = [
 
 	#upload pages
     path('upload/', views.upload, name = 'upload'),
-    path('upload/2', views.process_missing_fields, name = 'process_missing_fields'),
     path('upload/confirm', views.upload_confirm, name = 'upload_confirm'),
 
 	#backup page; under development

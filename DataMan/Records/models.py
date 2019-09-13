@@ -36,7 +36,7 @@ class Dataset(models.Model):
     _dateCreated = models.DateTimeField(verbose_name='Date Created', default=datetime.now)
 
     _fileLocation = models.TextField(verbose_name='Path to original file location', blank=True, null=True)
-    _fileLocationRemote = models.TextField(verbose_name='Path to remote (supercomputer) file location', blank=True, null=True)
+    _fileLocationRemote = models.TextField(verbose_name='Path to remote (i.e., supercomputer) file location', blank=True, null=True)
     _fileName = models.TextField(verbose_name='File Name', null=True, blank=False)
 
     _acquisitionStart = models.DateTimeField(verbose_name='Upload Date',default=datetime.now, null=True, blank=True)
@@ -149,7 +149,7 @@ class Sample(models.Model):
     _treatmentProtocol = models.ManyToManyField('Protocol', verbose_name='Treatment Protocol', blank=True)
     _dateCreated = models.DateTimeField(verbose_name='Date Created', default=datetime.now)
     _individual = models.ManyToManyField('Individual', verbose_name='Individual Identifier', blank=True)
-    _organism = models.TextField(verbose_name='Organism')
+    _organism = models.TextField(verbose_name='Organism Species')
     _organismModifications = models.TextField(verbose_name='Organism Modifications', default='None', null=True, blank=True)
     _comments = models.TextField(verbose_name='Comments, Notes, or Details',blank=True,null=True)
 

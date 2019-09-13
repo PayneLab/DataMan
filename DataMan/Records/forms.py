@@ -71,6 +71,10 @@ class DateTimeInput(forms.MultiWidget):
         return [None, None]
 
 class UploadFileForm(forms.ModelForm):
+    # It was suggested that we make it accept multiple files at once.
+    #_Files = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}),
+    #                            label = 'File', required=True)
+
     readFail = False
     class Meta:
         model = FileRead

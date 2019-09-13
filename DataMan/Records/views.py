@@ -26,6 +26,7 @@ from django.core.management import call_command
 from django.core.files.storage import default_storage
 from openpyxl.worksheet.datavalidation import DataValidation
 from os import remove
+from Records.exceptions import *
 
 from apscheduler.schedulers.background import BackgroundScheduler
 scheduler = BackgroundScheduler()
@@ -108,7 +109,7 @@ def make_backup():
 
     #backs up to box
     if settings.BOX_CONFIG:
-        print ("Trying Upload To Box")
+        #print ("Trying Upload To Box")
 
         #https://github.com/box/box-python-sdk/blob/master/docs/usage/
 
@@ -167,7 +168,6 @@ def start_job():
     if not scheduler.running: scheduler.start()
 def backup(request):
     start_job()
-    #print("Tick, making backup")
     options = {'Restore'}
 
     if settings.BOX_CONFIG:
@@ -230,7 +230,7 @@ def upload(request, option = None):
 
     if request.method == 'POST' and request.POST.get('Submit') == 'Submit':
 
-        print ("\nAttempting Upload")
+        info_logger.debug("\nAttempting Upload")
         form = forms.UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
             file = request.FILES['_File']
@@ -240,13 +240,10 @@ def upload(request, option = None):
             wb = openpyxl.load_workbook(file, data_only=True)
 
             def get_lead(wb, read_map):
-                try:
-                    lead = wb[read_map['wsIn']][read_map['lead']].value
-                    return lead
-                except Exception as e:
-                    error_logger.error(repr(e))
-                    context = {'form':form,'upload_status':"Must specify project lead.",}
-                    return render(request, 'upload.html', context)
+                lead = wb[read_map['wsIn']][read_map['lead']].value
+                if lead: return lead
+                else: raise UploadMissingFieldError(msg="Must specify project lead.")
+
             #read_only = True sometimes causes sharing violations
             #because it doesn't close fully
             if wb['Input']['I3'].value == "Mass spec":
@@ -260,12 +257,22 @@ def upload(request, option = None):
                 upload_summary = ["Unknown format. Please use one of the provided templates."]
             wb.close()
             upload_options = ['Confirm', 'Cancel']
-            request.session['upload_status'] = upload_status
-        except:
+
+        except UploadMissingFieldError as e:
+            upload_summary = [str(e)]
+            upload_status = str(e)+'\n'
+
+        except openpyxl.utils.exceptions.InvalidFileException:
+            upload_summary = "Invalid File. Please check that the file opens with Excel."
+
+        except Exception as e:
+            error_logger.error("Error in Upload:")
+            error_logger.error(e)
             upload_status = "Read in error.\nPlease use one of the provided templates."
             upload_summary = ["Unknown format. Please use one of the provided templates."]
-            request.session['upload_status'] = upload_status
-        print("Finished Upload")
+
+        request.session['upload_status'] = upload_status
+        info_logger.debug("Finished Upload")
         #saves summary of changes for report till confirm/delete option
         i = 0
         request.session['upload_summary'] = {}
@@ -275,23 +282,6 @@ def upload(request, option = None):
         request.session.modified = True
 
         return redirect ('upload_confirm')
-        """#This code is intended to handle 'missing fields',
-        #Things in the excel that are required but blank.
-        #I think I'm going to do it differently, though.
-        #Since I have the read in inside a try-block,
-        #I'll just have it through a type of error
-        #that I can catch and report.
-        print("read in complete")
-        if 'missing_fields' in request.session:
-            del request.session['missing_fields']
-        if 'missing_fields_data' in request.session:
-            del request.session['missing_fields_data']
-        missing_fields= get_missing_fields(wb, read_map)
-        missing_fields = list(dict.fromkeys(missing_fields))
-        print ('missing_fields: ', missing_fields)
-
-        request.session['missing_fields'] = missing_fields
-        return redirect ('process_missing_fields')#"""
 
     context = {
         'form':form,
@@ -305,7 +295,6 @@ def upload(request, option = None):
     make_backup()
     return render(request, 'upload.html', context)
 def read_data(request, wb, lead, read_map, upload_summary):
-    missing_fields = []
     summary = upload_summary
 
     wsIn = wb[read_map['wsIn']]
@@ -321,33 +310,32 @@ def read_data(request, wb, lead, read_map, upload_summary):
     #in one experiment per sheet with all data
     if 'exp_name' in read_map:
         exp_name = wsIn[read_map['exp_name']].value
-        if exp_name:
-            #this is where we start reading and checking
-            lead = wsIn[read_map['lead']].value
-            if lead == None:
-                missing_fields.append('lead')
-            if 'IRB' in read_map:
-                IRB = wsIn[read_map['IRB']].value
-                try: IRB = int(IRB)
-                except: IRB = None
-            else: IRB = None
-            if 'team' in read_map:
-                # the original Price template did not include team members,
-                # so we check this first.
-                team = []
-                for i in read_map['team']:
-                    #multiple cells - allows dropdown with lab member names
-                    #The alternative possibility is that the user put them all
-                    # in the first cell, which is fine.
-                    if wsIn[i].value != None:
-                        member_name = (wsIn[i].value).strip(' ')
-                        team.append(member_name)
-                team = ', '.join(team)# clean joins
-            else: team = None
-            if 'description' in read_map:
-                des = wsIn[read_map['description']].value
-            else: des = None
-            e_n = exp_exist_or_new(exp_name, lead, team=team, IRB = IRB, description = des)
+        if not exp_name: raise UploadMissingFieldError(msg="Missing Experiment Name")
+        #this is where we start reading and checking
+        lead = wsIn[read_map['lead']].value
+        if not lead: raise UploadMissingFieldError(msg="Missing Project Lead")
+        if 'IRB' in read_map:
+            IRB = wsIn[read_map['IRB']].value
+            try: IRB = int(IRB)
+            except: IRB = None
+        else: IRB = None
+        if 'team' in read_map:
+            # the original Price template did not include team members,
+            # so we check this first.
+            team = []
+            for i in read_map['team']:
+                #multiple cells - allows dropdown with lab member names
+                #The alternative possibility is that the user put them all
+                # in the first cell, which is fine.
+                if wsIn[i].value != None:
+                    member_name = (wsIn[i].value).strip(' ')
+                    team.append(member_name)
+            team = ', '.join(team)# clean joins
+        else: team = None
+        if 'description' in read_map:
+            des = wsIn[read_map['description']].value
+        else: des = None
+        e_n = exp_exist_or_new(exp_name, lead, team=team, IRB = IRB, description = des)
         summary.append(e_n)
 
     #Get the extra fields...
@@ -356,16 +344,18 @@ def read_data(request, wb, lead, read_map, upload_summary):
     #then read datasets from "Worklist" sheet
     #separating out QC
     for i in rows:
-        # i in wsIn['B34:H63']: #.format(wsIn.max_row):
         #each record a dataset associated with a sample
         if i[read_map['sample_name']].value is None:
             break
             #All done with samples
         #Otherwise read it in
         if read_map['experiment_global']:
-            e_n = exp_exist_or_new(wsIn[read_map['experiment_loc']].value, lead)
+            exp_n = wsIn[read_map['experiment_loc']].value
         else:
-            e_n = exp_exist_or_new(i[int(read_map['experiment_loc'])].value, lead)
+            exp_n = i[int(read_map['experiment_loc'])].value
+        if not exp_n: raise UploadMissingFieldError(msg="Missing Experiment Name")
+        e_n = exp_exist_or_new(exp_n, lead)
+
         experiment = Experiment.objects.all().get(_experimentName = e_n[2])
         summary.append(e_n)
 
@@ -378,13 +368,11 @@ def read_data(request, wb, lead, read_map, upload_summary):
     inRows = wsIn[(read_map['in_section_lookup']).format(wsIn.max_row)]
     for wlRow in wlRows:
         if wlRow[read_map['dataset_name']].value is None:
-            break #there isn't a dataset there
+            break #there isn't a dataset listed
         #read in datasets
         sample_type = wlRow[read_map['wl_sample_type']].value
-        print (sample_type)
         if sample_type.startswith('QC'):
-            print (sample_type,'\n\n\n')
-            qc_type = sample_type[3:]
+            qc_type = sample_type[3:].strip()
             sample_name = str(lead+" lab QC "+qc_type).strip()
             if Sample.objects.all().filter(_sampleName = sample_name).exists():
                 sample = Sample.objects.all().get(_sampleName = sample_name)
@@ -392,12 +380,12 @@ def read_data(request, wb, lead, read_map, upload_summary):
                 summary.append(["EXISTING", 'QC Sample: ', sample_name])
                 summary.append(["EXISTING", 'QC Experiment: ', experiment.experimentName()])
             else:
-                if not 'QC_exp' in read_map:
-                    exp_name = (str(lead+" lab QC")).strip()
-                else: exp_name = str(wsWL[read_map['QC_exp']].value)
+                if 'QC_exp' in read_map:
+                    exp_name = str(wsWL[read_map['QC_exp']].value)
+                if not exp_name: exp_name = (str(lead+" lab QC")).strip()
                 #or wsIn if that's where QC information is defined
                 if Experiment.objects.all().filter(_experimentName = exp_name).exists():
-                    experiment = Experiment.objects.all().get(_experimentName =exp_name,  _projectLead = lead)
+                    experiment = Experiment.objects.all().get(_experimentName=exp_name,  _projectLead = lead)
                     summary.append(["EXISTING", 'QC Experiment: ', exp_name])
                 else:
                     experiment = Experiment( _experimentName = exp_name, _projectLead =  lead)
@@ -415,11 +403,15 @@ def read_data(request, wb, lead, read_map, upload_summary):
             sampleRow = []
         else: #Not a QC - it's a sample defined on input
             sampleNum = wlRow[read_map['wl_sample_num']].value
+            if not sampleNum:
+                 raise UploadMissingFieldError(msg="'Use Sample' numbers must be specified.")
             sampleRow = findIn(sampleNum, inRows, read_map['lookup_column'])
             sample_name = sampleRow[read_map['lookup_sample']].value
+            if not sample_name:
+                 raise UploadMissingFieldError(msg="'Use Sample' numbers must correspond to samples on the Input page.")
             if Sample.objects.all().filter(_sampleName = sample_name).exists():
                 sample = Sample.objects.all().get(_sampleName = sample_name)
-            else: raise ValueError("No known sample")
+            else: raise UploadMissingFieldError(msg=str((sample_name+" is not a defined sample.")))
             experiment = sample.experiment()
         #At this point both the sample and the experiment have been defined
         #"""
@@ -452,7 +444,6 @@ def upload_confirm(request, option = None):
                 upload_by_types[record_type] = []
             upload_by_types[record_type].append(summary[i])
 
-    for i in summary: print (summary[i])
     if len(upload_summary) >1: summary = upload_summary[1:]
     upload_status = upload_summary[0]
 
@@ -488,7 +479,7 @@ def upload_confirm(request, option = None):
                 queryset = Dataset.objects.filter(_datasetName__in = these)
                 QC_dataset_table = DatasetTable(queryset.order_by('-pk'), new_or_existing=exi_new)
                 QC_dataset_table_exists = True
-            else: print (i, "isn't yet a table")
+            else: info_logger.debug(i, "isn't yet a table")
 
         elif "Experiment" in i:
             experiment_set = Experiment.objects.all().filter(_experimentName__in=these)
@@ -510,7 +501,7 @@ def upload_confirm(request, option = None):
             individual_table = IndividualTable(queryset.order_by('-pk'), new_or_existing=exi_new)
             individual_table_exists = True
 
-        else: print ("\n\nUnknown Type: ", i)
+        else: debug_logger.warning(str("Upload: Unknown Type: "+i))
 
     # To get the tables in this order, we can't just append
     #Them as they come.
@@ -529,7 +520,7 @@ def upload_confirm(request, option = None):
     context = {}
 
     if request.GET.get('option') == "Confirm":
-        print ("Confirmed")
+        info_logger.debug("Confirmed")
         context['upload_status'] = 'Saved'
         context['summary'] = ''
         try: del request.session['upload_summary']
@@ -540,7 +531,7 @@ def upload_confirm(request, option = None):
         return redirect('upload')
     elif request.GET.get('option') == 'Cancel':
         context['upload_status'] = 'Cancelling...'
-        print ("Canceled")
+        info_logger.debug("Canceled")
         try:
             #get rid of read in data
             upload_summary = request.session.get('upload_summary')
@@ -572,7 +563,7 @@ def upload_confirm(request, option = None):
                             if Individual.objects.all().filter(_individualIdentifier = v[2]).exists():
                                 s = Individual.objects.all().get(_individualIdentifier = v[2])
                                 s.delete()
-                        else: print (v, "Delete Unsuccessful")
+                        else: debug_logger.warning(v, "Delete Unsuccessful")
             request.session['upload_status'] = 'Upload Cancelled'
             del request.session['upload_summary']
         except Exception as e:
@@ -591,10 +582,13 @@ def upload_confirm(request, option = None):
     return render(request, 'upload.html', context)
 def read_Individuals(wsInd, read_map, upload_summary):
     exp_n = wsInd[read_map['indivExp']].value
+    if not exp_n: exp = False;
+    else:
+        exp_n=exp_n.strip()
 
-    if Experiment.objects.all().filter(_experimentName = exp_n).exists():
-        exp = Experiment.objects.all().get(_experimentName = exp_n)
-    else: return upload_summary
+        if Experiment.objects.all().filter(_experimentName = exp_n).exists():
+            exp = Experiment.objects.all().get(_experimentName = exp_n)
+        else: return upload_summary
 
     rows =  wsInd[(read_map['indivRows']).format(get_column_letter(wsInd.max_column), wsInd.max_row)]
 
@@ -605,6 +599,8 @@ def read_Individuals(wsInd, read_map, upload_summary):
         if Individual.objects.all().filter(_individualIdentifier = indivID).exists():
             upload_summary.append([EXISTING, 'Individual:', indivID])
             continue
+
+        if not exp: raise UploadMissingFieldError(msg="Missing Experiment Name on Individuals page.")
 
         new_Ind = Individual(
             _individualIdentifier = indivID,
@@ -619,81 +615,6 @@ def read_Individuals(wsInd, read_map, upload_summary):
         new_Ind.save()
 
     return upload_summary
-
-###NOT IMPLEMENTED YET 3-19-19###
-def get_missing_fields(wb, read_map):
-    missing_fields = []
-    if 'missing_fields' in read_map:
-        missing_fields = read_map['missing_fields']
-    #the rest of our checking
-    #Required Fields:
-    #Exp. Name, Project Lead
-    #    Design needs a name (exp does not need design)
-    #
-    #Individual ID, gender, age, health Status & extra_fields
-    #
-    #samples name, exp, storage_condition, location, organism
-    #
-    #dataset name, sample, instrument, file name, extension, path
-
-    wsIn = wb[read_map['wsIn']]
-    wsWL = wb[read_map['wsWL']]
-
-    #bad logic
-    if read_map['experiment_global']:
-        name = wsIn[read_map['experiment_loc']].value
-        if name == None:
-            missing_fields.append('experiment_name')
-        elif not experiments.filter(_experimentName = name).exists():
-            #check for other experiment data
-            if 'lead' in read_map:
-                if wsIn[read_map['lead']].value == None:
-                    missing_fields.append('lead')
-            elif not 'lead' in missing_fields: missing_fields.append('lead')
-        elif 'lead' in missing_fields:
-            missing_fields.remove('lead')
-    else:
-        missing_fields.append('lead')
-        missing_fields.append('IRB')
-        missing_fields.append('description')
-
-    if 'wsIndividual'in read_map:
-        #check individuals
-        if read_map['wsIndividual'] in wb:
-            wsIndividual = wb[read_map['wsIndividual']]
-
-    if read_map['variable_colums_TF']:
-        rows = wsIn[(read_map['in_section']).format(get_column_letter(wsIn.max_column), wsIn.max_row)]
-    else: rows = wsIn[(read_map['in_section']).format(wsIn.max_row)]
-
-    #Do I now check each sample, the first one, or what?
-    #Maybe the e_n functions report missing data
-    #and here we just catch overall missing categories of data?
-
-    #Now I'm wondering if I need to ditch this and make it along with the read in?
-
-    return missing_fields
-def process_missing_fields(request):
-    #if not 'missing_fields' in request.session:
-    #    return redirect('upload')
-
-    missing_fields = request.session['missing_fields']
-    #"""
-    #testing not verified
-    form = forms.ListFieldsForm(extraFields = missing_fields)
-    if request.method == 'POST':
-        #Checked and sent to form but not yet recorded
-        form = forms.ListFieldsForm(request.POST)
-        request.session['missing_field_data'] = form.data
-
-        upload_summary = request.session['upload_summary'] #to be used in template
-        del request.session['missing_fields']
-        del request.session['missing_field_data']
-        return redirect ('upload_confirm')
-
-    context = {'form':form, 'header':'Please address missing fields'}
-
-    return render(request, 'title-form.html', context)
 
 #overload for additional information
 def exp_exist_or_new(name, lead, team = None, IRB = None, description = None, ):
@@ -747,13 +668,15 @@ def sample_exists_or_new(name, experiment, row, wsIn, read_map, extra_fields = N
         date = ''
 
     #Check the individual
-    if row[read_map['individualID']] != None:
+    if row[read_map['individualID']].value != None:
         indivID = row[read_map['individualID']].value
-        if Individual.objects.all().filter(_individualIdentifier = indivID).exists():
-            ind = Individual.objects.all().get(_individualIdentifier = indivID)
+        if not indivID: ind = None
         else:
-            ind = Individual(_individualIdentifier = indivID)
-            ind.save()
+            if Individual.objects.all().filter(_individualIdentifier = indivID).exists():
+                ind = Individual.objects.all().get(_individualIdentifier = indivID)
+            else:
+                ind = Individual(_individualIdentifier = indivID)
+                ind.save()
     else: ind = None
 
     def protocol_exists_or_new(ptName):
@@ -766,12 +689,15 @@ def sample_exists_or_new(name, experiment, row, wsIn, read_map, extra_fields = N
     if read_map['storage_condition']: condition = str(row[read_map['storage_condition']].value)
     else: condition = "Unspecified"
 
+    organism = wsIn[(read_map['organism'])].value
+    if not organism: raise UploadMissingFieldError(msg="Please specify organism species. (Or mark it as Unknown)")
+
     newSample = Sample(
         _sampleName = name,
         _storageCondition = condition,
         _experiment = experiment,
         _storageLocation = str(row[read_map['storage_location']].value),
-        _organism = wsIn[(read_map['organism'])].value,
+        _organism = organism,
         _comments = comment,
     )
     if date !='': newSample.setDateCreated(date)
@@ -839,27 +765,30 @@ def dataset_exists_or_new(name, experiment, sample, row, wb, wsIn, wlRow, read_m
     if read_map['file_extension_from_excel']: extension = str(wlRow[read_map['file_extension']].value)
     else: extension = str(read_map['file_extension'])
 
+    file_name=wlRow[read_map['file_name']].value
+    if not file_name: raise UploadMissingFieldError(msg="File Names are Required.")
+    file_name=str(file_name)+extension
+
+    loc1 = str(wlRow[read_map['file_location']].value)
+    locRemote = str(wlRow[read_map['file_location_remote']].value)
+
+    if not loc1 and not locRemote: raise UploadMissingFieldError(msg="File paths are required.")
+
     newDataset = Dataset(
         _datasetName = name,
         _experiment = experiment,
         _instrument = initInstrument,
-        _fileName = str(wlRow[read_map['file_name']].value)+extension,
-        _fileLocation = str(wlRow[read_map['file_location']].value),
-        _fileLocationRemote = str(wlRow[read_map['file_location_remote']].value),
+        _fileName = file_name,
+        _fileLocation = loc1,
+        _fileLocationRemote = locRemote,
         _instrumentSetting = setting,
         _type = dataType,
-        #Commas after each value
-        #acquisition dates
-        #_status
-        #_size
-        #_fileHash
     )
     if date: newDataset.setDateCreated(date)
     newDataset.save()
     newDataset._sample.add(sample)
 
     return [NEW, 'Dataset: ', name]
-
 
 """How detailField forms need to handle files"""
 def df_save_if_valid(FILES, form):
