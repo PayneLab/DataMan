@@ -2,9 +2,10 @@
     display: grid;
     grid-template-rows: 300px 400px auto;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 0%;
+    /* width: 0%;
     margin-left: 5%;
-    margin-right: 5%;
+    margin-right: 5%; */
+
 }
 
 .map {
@@ -38,8 +39,8 @@
 }
 
 .nav-block {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background: #002e5d;
     border-radius: 10px;
     margin: auto;
@@ -51,9 +52,9 @@
 
 .nav-block__title {
     color: #fff;
-    font-size: 26px;
+    font-size: 36px;
     text-align: center;
-    margin-bottom: 18px;
+    /* margin-bottom: 18px; */
 }
 
 .nav-block__icon {
@@ -61,6 +62,7 @@
     width: 90px;
     color: #ccd5df;
     margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 .nav-block:hover {

@@ -8,19 +8,22 @@ h1{
        grid-column: 1/5;
 }
 
-p {
-   padding: 20px;
-}
+/* p {
+   padding: 10px;
+} */
+
+/* this form is for selecting the experiemnt */
 form {
     position: absolute;
-    left: 500px;
-    top: 50px;
-    padding: 20px;
+    left: 10px;
+    top: 175px;
+    /* padding: 20px; */
+    margin-right: 500px;
 }
 
 .nav-block {
-   width: 200px;
-   height: 200px;
+   width: 250px;
+   height: 250px;
    background: #002e5d;
    border-radius: 10px;
    margin: auto;
@@ -32,14 +35,14 @@ form {
 
 .nav-block__title {
    color: #fff;
-   font-size: 26px;
+   font-size: 28px;
    text-align: center;
    margin-bottom: 18px;
 }
 
 .nav-block__icon {
-   height: 90px;
-   width: 90px;
+   height: 120px;
+   width: 120px;
    color: #ccd5df;
    margin: 0 auto;
    grid-column: 1/2;
@@ -81,9 +84,9 @@ td {
    width: 90px;
    height: 30px;
    border-radius: 0px;
-   padding: 15px;
-   padding-right: 20px;
-   padding-left: 20px;
+   /* padding: 5px; */
+   padding-right: 5px;
+   padding-left: 5px;
 }
 
 .table-outer {
