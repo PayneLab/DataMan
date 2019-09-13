@@ -17,13 +17,16 @@
     <byu-header home-url="http://127.0.0.1:8000/records/">
         <h1 slot="site-title">DataMan</h1>
     </byu-header>
+
+    <!-- <div class="Header-navigation" data-main-navigation data-toggle-item="navigation"> -->
+
     <byu-menu slot="nav" collapsed class>
         <!-- <a href="javascript: void 0" class="active">Home</a> -->
-        <a href="{% url 'records' %}">Home</a>
-        <a href="{% url 'archive' %}">Archive</a>
-        <a href="{% url 'create-new' %}">New Record</a>
-        <a href="{% url 'upload' %}">Upload</a>
-        <a href="{% url 'about' %}">About</a>
+        <a class="navigationItem" href="{% url 'records' %}">Home</a>
+        <a class="navigationItem" href="{% url 'archive' %}">Archive</a>
+        <a class="navigationItem" href="{% url 'create-new' %}">New Record</a>
+        <a class="navigationItem" href="{% url 'upload' %}">Upload</a>
+        <a class="navigationItem" href="{% url 'about' %}">About</a>
     </byu-menu>
     <div class="content">
         {% block content %}{% endblock %}

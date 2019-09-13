@@ -15,9 +15,10 @@ h1{
 /* this form is for selecting the experiemnt */
 form {
     position: absolute;
-    left: 30px;
-    top: 155px;
-    padding: 20px;
+    left: 10px;
+    top: 175px;
+    /* padding: 20px; */
+    margin-right: 500px;
 }
 
 .nav-block {

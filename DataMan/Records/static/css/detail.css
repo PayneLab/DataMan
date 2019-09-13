@@ -22,8 +22,8 @@
 
 a.nav-block {
     width: 80px;
-    color: #FEFEFE;
-    background: #BABABA;
+    color: #fff;
+    background: #002e5d;
     display: inline-block;
 }
 input.nav-block {
