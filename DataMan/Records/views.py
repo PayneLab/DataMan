@@ -311,6 +311,7 @@ def read_data(request, wb, lead, read_map, upload_summary):
     if 'exp_name' in read_map:
         exp_name = wsIn[read_map['exp_name']].value
         if not exp_name: raise UploadMissingFieldError(msg="Missing Experiment Name")
+        exp_name=exp_name.stip()
         #this is where we start reading and checking
         lead = wsIn[read_map['lead']].value
         if not lead: raise UploadMissingFieldError(msg="Missing Project Lead")
@@ -436,6 +437,7 @@ def upload_confirm(request, option = None):
     upload_summary = []
     upload_by_types = {}
 
+    if not summary: return redirect(request, 'upload.html')
     for i in summary:
         upload_summary.append(summary[i])
         if (i) != '':
