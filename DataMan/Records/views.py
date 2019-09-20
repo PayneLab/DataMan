@@ -311,7 +311,7 @@ def read_data(request, wb, lead, read_map, upload_summary):
     if 'exp_name' in read_map:
         exp_name = wsIn[read_map['exp_name']].value
         if not exp_name: raise UploadMissingFieldError(msg="Missing Experiment Name")
-        exp_name=exp_name.stip()
+        exp_name=exp_name.strip()
         #this is where we start reading and checking
         lead = wsIn[read_map['lead']].value
         if not lead: raise UploadMissingFieldError(msg="Missing Project Lead")
