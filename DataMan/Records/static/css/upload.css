@@ -60,10 +60,10 @@ table {
 }
 
 tr[new-or-existing='NEW'] {
-  background: #6ce6f6;
+  background: white;
 }
 tr[new-or-existing='EXISTING']{
-  background: white;
+  background: #6ce6f6;
 }
 
 tr,
